@@ -1,0 +1,15 @@
+.magazine {
+  height: 100%;
+}
+
+.magazine-container {
+  background: black;
+  height: 600px;
+  width: 600px;
+  max-width: 600px;
+  max-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}

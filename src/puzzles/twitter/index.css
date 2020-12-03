@@ -1,0 +1,310 @@
+/* ============== TWITTER ================== */
+
+#parentTwitterWrapper {
+    position: relative;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+#twitter {
+    width: 100%;
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-self: stretch;
+}
+
+#twitter .content {
+    flex-grow: 10;
+}
+
+#twitter .hide {
+    display: none;
+}
+
+#twitter .click {
+    cursor: pointer;
+}
+
+#twitter .flex {
+    display: flex;
+}
+
+#twitterSivupalkki {
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    min-height: 90vh;
+}
+
+#twitterSivupalkki img {
+    width: 48px;
+}
+
+.twitterNavi {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 20px;
+    border: solid 1px rgb(230, 236, 240);
+    border-top: solid 0px;
+    position: sticky;
+    top: 0;
+    background: rgb(255, 255, 255);
+    z-index: 200;
+}
+
+.twitterNavi .hakukentta {
+    background-color: rgb(230, 236, 240);
+    height: 18px;
+    padding: 8px;
+    border-radius: 18px;
+    width: 100%;
+    padding-left: 14px;
+    margin: 0 0 0 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-self: center;
+    color: #414141;
+}
+
+.twitterNavi .hakukentta div:nth-child(1) {
+    margin-right: 8px;
+}
+
+.twitterNavi .hakukentta img {
+    width: 20px;
+    padding-top: 0px;
+}
+
+.twitterNavi img, .twitterProfiiliNavi img {
+    width: 32px;
+}
+
+#twitter .tweet {
+    display: flex;
+    margin: 0;
+    padding: 10px;
+    border: solid 1px rgb(230, 236, 240);
+    border-top: solid 0px;
+}
+
+#twitter .tweet:hover {
+    background: #f5f8fa;
+}
+
+#twitter .twitterProfilePic img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+#twitter .twitterHandle {
+    color: rgb(101, 119, 134);
+    font-weight: bold;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content;
+}
+
+#twitter .desc {
+    margin: 6px 0;
+}
+
+#twitter .twitterContent {
+    margin: 0 0 0 20px;
+    width: 100%;
+}
+
+#twitter .twitterPost {
+    margin: 4px 0;
+}
+
+#twitter .twitterContent img, #twitter .profiiliTaustakuva img {
+    width: 100%;
+}
+
+#twitter .twitterLink {
+    border-radius: 20px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    border: 1px solid #e2e2e2;
+    margin-top: 10px;
+}
+
+#twitter .linkText, #twitter .linkDescription {
+    color: rgb(101, 119, 134);
+}
+
+#twitter .linkText img {
+    width: 20px;
+    margin-right: 4px;
+}
+
+#twitter .profiili {
+    margin: 0;
+    border: 1px solid #e2e2e2;
+    border-top: 0px solid #e2e2e2;
+    padding-bottom: 20px;
+}
+
+#twitter .joined {
+    display: flex;
+    align-self: center;
+}
+
+#twitter .joined div {
+    align-self: center;
+}
+
+#twitter .joined img {
+    width: 20px;
+    margin-right: 4px;
+}
+
+#twitter .twitterLink .linkHeader, #twitter .twitterLink .linkDescription, #twitter .twitterLink .linkText {
+    padding: 5px 10px;
+    display: flex;
+}
+
+#twitter .twitterHashtags {
+    color: #1b95e0;
+}
+
+#twitter .twitterMeta {
+    display: flex;
+    justify-content: space-between;
+    color: #cccccc;
+    fill: currentColor;
+    padding: 10px 0;
+}
+
+#twitter .twitterMeta div {
+    display: flex;
+    align-self: center;
+    color: #657786;
+    min-width: 25%;
+}
+
+#twitter .twitterMeta div img {
+    width: 20px;
+}
+
+#twitter .twitterProfiiliNavi {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    border-top: solid 0px;
+    position: sticky;
+    top: 0;
+    background: rgb(255, 255, 255);
+    overflow: hidden;
+    z-index: 200;
+}
+
+#twitter .twitterProfiiliNavi .palaa, .twitterNavi .palaa {
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+#twitter .twitterProfiiliNavi .palaa:hover, .twitterNavi .palaa:hover {
+    background: #e9f6fd;
+    ;
+}
+
+#twitter .twitterProfilePicBig {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 1% 2% 0;
+    position: relative;
+}
+
+#twitter .twitterProfilePicBig img {
+    width: calc(100% - 8px);
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+#twitter .metaWrapper {
+    margin: 0 20px;
+}
+
+#twitter .harmaa {
+    color: #657786;
+    font-weight: normal;
+}
+
+#twitter .seuraukset {
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#twitter .seuraukset div {
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+#twitter .seuraa {
+    border: 1px solid #1b95e0;
+    color: #1b95e0;
+    padding: 2% 10px;
+    border-radius: 71px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+#twitter .pic {
+    width: 20%;
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+}
+
+#twitter .handle {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#twitter .tweets-profile {
+
+    border-top: solid 1px rgb(230, 236, 240);
+    margin-top: 20px;
+}
+
+#twitter .twitter-Newsimage {
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+
+#twitter .twitter-Newsimage img {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+}
+
+.twitter-News {
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width: 500px) {
+    .sivupalkki {
+        display: none;
+    }
+    #parentTwitterWrapper {
+        padding-right: 0;
+    }
+}

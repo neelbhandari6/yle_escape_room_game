@@ -1,0 +1,57 @@
+{
+  "name": "escape_peli",
+  "version": "1.0.0",
+  "description": "A simple NodeJs Express webserver.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html --public-url https://lusi-dataviz.ylestatic.fi/$npm_package_name/",
+    "deploy": "npm run build && dataviz-deploy generate --dir dist && dataviz-deploy sync --folder dist lusi $npm_package_name",
+    "build:test": "parcel build index.html --public-url https://lusi-dataviz.test.ylestatic.fi/$npm_package_name/",
+    "deploy:test": "npm run build:test && dataviz-deploy generate --dir dist  && dataviz-deploy sync --folder dist lusi-test $npm_package_name"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aWeirdo/babylonJs_sample_server.git"
+  },
+  "staticFiles": {
+    "staticPath": [
+      "public"
+    ],
+    "watcherGlob": "**"
+  },
+  "author": "aWeirdo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aWeirdo/babylonJs_sample_server/issues"
+  },
+  "homepage": "https://github.com/aWeirdo/babylonJs_sample_server#readme",
+  "dependencies": {
+    "ammo.js": "0.0.10",
+    "animate.css": "^3.7.2",
+    "babylonjs": "^4.1.0",
+    "babylonjs-inspector": "^4.1.0",
+    "babylonjs-loaders": "^4.1.0",
+    "babylonjs-post-process": "^4.1.0",
+    "babylonjs-procedural-textures": "^4.1.0",
+    "cannon": "^0.6.2",
+    "dat.gui": "^0.7.7",
+    "earcut": "^2.2.2",
+    "express": "^4.16.4",
+    "gltf-validator": "^2.0.0-dev.3.2",
+    "imagesloaded": "^4.1.4",
+    "lit-html": "^1.2.1",
+    "oimo": "^1.0.9",
+    "parcel-bundler": "^1.12.4",
+    "pepjs": "^0.5.2",
+    "src": "^1.1.2",
+    "swiper": "^5.3.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "parcel-plugin-clean-dist": "0.0.6",
+    "parcel-plugin-static-files-copy": "^2.3.1"
+  }
+}

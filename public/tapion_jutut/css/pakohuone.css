@@ -1,0 +1,705 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: #000;
+    margin: 0px;
+}
+
+.napit {
+    display: flex;
+    padding: 10px;
+    background: #e2e2e2;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+.napit div {
+    cursor: pointer;
+    border-radius: 99px;
+    padding: 6px 14px;
+    background: rgb(49, 49, 49);
+    color: #fff;
+}
+
+.hide {
+    display: none;
+}
+
+/* ============== TWITTER ================== */
+
+#parentTwitterWrapper {
+    position: relative;
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-right: 10px;
+}
+
+#twitter {
+    width: 100%;
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-self: stretch;
+}
+
+#twitter .content {
+    flex-grow: 10;
+}
+
+#twitter .hide {
+    display: none;
+}
+
+#twitter .click {
+    cursor: pointer;
+}
+
+#twitter .flex {
+    display: flex;
+}
+
+#twitterSivupalkki {
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    min-height: 90vh;
+}
+
+#twitterSivupalkki img {
+    width: 48px;
+}
+
+.twitterNavi {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 20px;
+    border: solid 1px rgb(230, 236, 240);
+    border-top: solid 0px;
+    position: sticky;
+    top: 0;
+    background: rgb(255, 255, 255);
+    z-index: 200;
+}
+
+.twitterNavi .hakukentta {
+    background-color: rgb(230, 236, 240);
+    height: 18px;
+    padding: 8px;
+    border-radius: 18px;
+    width: 100%;
+    padding-left: 14px;
+    margin: 0 0 0 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-self: center;
+    color: #414141;
+}
+
+.twitterNavi .hakukentta div:nth-child(1) {
+    margin-right: 8px;
+}
+
+.twitterNavi .hakukentta img {
+    width: 20px;
+    padding-top: 0px;
+}
+
+.twitterNavi img, .twitterProfiiliNavi img {
+    width: 32px;
+}
+
+#twitter .tweet {
+    display: flex;
+    margin: 0;
+    padding: 20px;
+    border: solid 1px rgb(230, 236, 240);
+    border-top: solid 0px;
+}
+
+#twitter .tweet:hover {
+    background: #f5f8fa;
+}
+
+#twitter .twitterProfilePic img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+#twitter .twitterHandle {
+    color: rgb(101, 119, 134);
+    font-weight: bold;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content;
+}
+
+#twitter .desc {
+    margin: 6px 0;
+}
+
+#twitter .twitterContent {
+    margin: 0 0 0 20px;
+    width: 100%;
+}
+
+#twitter .twitterPost {
+    margin: 4px 0;
+}
+
+#twitter .twitterContent img, #twitter .profiiliTaustakuva img {
+    width: 100%;
+}
+
+#twitter .twitterLink {
+    border-radius: 20px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    border: 1px solid #e2e2e2;
+    margin-top: 10px;
+}
+
+#twitter .linkText, #twitter .linkDescription {
+    color: rgb(101, 119, 134);
+}
+
+#twitter .linkText img {
+    width: 20px;
+    margin-right: 4px;
+}
+
+#twitter .profiili {
+    margin: 0;
+    border: 1px solid #e2e2e2;
+    border-top: 0px solid #e2e2e2;
+    padding-bottom: 20px;
+}
+
+#twitter .joined {
+    display: flex;
+    align-self: center;
+}
+
+#twitter .joined div {
+    align-self: center;
+}
+
+#twitter .joined img {
+    width: 20px;
+    margin-right: 4px;
+}
+
+#twitter .twitterLink .linkHeader, #twitter .twitterLink .linkDescription, #twitter .twitterLink .linkText {
+    padding: 5px 10px;
+    display: flex;
+}
+
+#twitter .twitterHashtags {
+    color: #1b95e0;
+}
+
+#twitter .twitterMeta {
+    display: flex;
+    justify-content: space-between;
+    color: #cccccc;
+    fill: currentColor;
+    padding: 10px 0;
+}
+
+#twitter .twitterMeta div {
+    display: flex;
+    align-self: center;
+    color: #657786;
+    min-width: 25%;
+}
+
+#twitter .twitterMeta div img {
+    width: 20px;
+}
+
+#twitter .twitterProfiiliNavi {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    border-top: solid 0px;
+    position: sticky;
+    top: 0;
+    background: rgb(255, 255, 255);
+    overflow: hidden;
+    z-index: 200;
+}
+
+#twitter .twitterProfiiliNavi .palaa, .twitterNavi .palaa {
+    width: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+#twitter .twitterProfiiliNavi .palaa:hover, .twitterNavi .palaa:hover {
+    background: #e9f6fd;
+    ;
+}
+
+#twitter .twitterProfilePicBig {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 1% 2% 0;
+    position: relative;
+}
+
+#twitter .twitterProfilePicBig img {
+    width: calc(100% - 8px);
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+#twitter .metaWrapper {
+    margin: 0 20px;
+}
+
+#twitter .harmaa {
+    color: #657786;
+    font-weight: normal;
+}
+
+#twitter .seuraukset {
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#twitter .seuraukset div {
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+#twitter .seuraa {
+    border: 1px solid #1b95e0;
+    color: #1b95e0;
+    padding: 2% 10px;
+    border-radius: 71px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+#twitter .pic {
+    width: 20%;
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+}
+
+#twitter .handle {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+    .sivupalkki {
+        display: none;
+    }
+    #parentTwitterWrapper {
+        padding-right: 0;
+    }
+}
+
+/* ============== KAMERARULLA ================== */
+
+#parentCameraWrapper {
+    background: black;
+}
+
+#parentCameraWrapper img {
+    width: 100%;
+    display: block;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: rgb(22, 22, 22);
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.kuvateksti {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    text-shadow: 2px 2px 10px #000;
+}
+
+/* ============== FACEBOOK ================== */
+
+#parentFacebookWrapper {
+    font-family: Helvetica, sans-serif;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#facebookNavi {
+    background-color: #4267b2;
+    border-bottom: 1px solid #29487d;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    width: calc(100% - 30px);
+    padding: 10px 10px 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+#facebookNavi .vasen, #facebookNavi .oikea {
+    display: flex;
+    align-self: center;
+}
+
+#facebookNavi .vasen {
+    width: calc(50% - 10px);
+}
+
+#facebookNavi .oikea {
+    justify-content: flex-end;
+}
+
+#facebookNavi .oikea div {
+    padding: 0 6px;
+}
+
+#facebookNavi .oikea span {
+    vertical-align: sub;
+    font-weight: 500;
+}
+
+#facebookNavi .oikea div.eka {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#facebookNavi .oikea div i {
+    background-image: url("../img/facebook/facebook_sprite2.png");
+    background-size: 26px 979px;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    display: block;
+}
+
+#facebookNavi .oikea .kp {
+    background-position: 0 -763px;
+    opacity: .6;
+}
+
+#facebookNavi .oikea .msg {
+    background-position: 0 -813px;
+    opacity: .6;
+}
+
+#facebookNavi .oikea .ntf {
+    background-position: 0 -713px;
+    opacity: .6;
+}
+
+#facebookContentWrapper {
+    display: flex;
+    background-color: #e9ebee;
+    width: 100%;
+}
+
+#facebookContent {
+    flex-grow: 2;
+}
+
+#facebookSidebar {
+    position: sticky;
+    top: 0;
+    margin: 20px 30px 20px 20px;
+}
+
+#parentFacebookWrapper .logo {
+    background-image: url("../img/facebook/facebook_sprite.png");
+    background-size: 64px 5008px;
+    background-position: 0 5348px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: block;
+}
+
+#parentFacebookWrapper .facebookSearch {
+    background: white;
+    color: #414141;
+    font-size: 16px;
+    border-radius: 3px;
+    line-height: 1;
+    border: 1px solid #3b5998;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 2;
+}
+
+#parentFacebookWrapper .facebookSearch div {
+    padding: 8px;
+}
+
+#parentFacebookWrapper .facebookSearch div:nth-child(2) {
+    background-color: #e9ebee;
+    border-radius: 0 2px 2px 0;
+}
+
+#facebookSidebar div {
+    display: flex;
+    align-self: center;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+#facebookSidebar i {
+    background-image: url("../img/facebook/facebook_sprite.png");
+    background-size: 32px 2509px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    display: block;
+    margin-right: 8px;
+}
+
+#facebookSidebar .uutiset {
+    background-position: 0 -930px;
+}
+
+#facebookSidebar .messenger {
+    background-position: 0 -195px;
+}
+
+#facebookSidebar .watch {
+    background-position: 0 -1455px;
+}
+
+#facebookSidebar .marketplace {
+    background-position: 0 -867px;
+}
+
+#facebookSidebar .tapahtumat {
+    background-position: 0 -405px;
+}
+
+#facebookSidebar .sivut {
+    background-position: 0 -237px;
+}
+
+#facebookSidebar .ryhmat {
+    background-position: 0 -132px;
+}
+
+#facebookSidebar .muistot {
+    background-position: 0 -993px;
+}
+
+.facebookSearch .search {
+    background-image: url(../img/facebook/facebook_sprite2.png);
+    background-size: 26px 979px;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    display: block;
+    margin: 0 10px;
+    float: right;
+    background-position: 0 -949px;
+}
+
+.facebookPost, .facebookMessage {
+    padding: 10px 0;
+    background: #fff;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.facebookMessage {
+    padding: 10px
+}
+
+.facebookPost>div {
+    margin: 0 10px;
+}
+
+.facebookPost .linkki {
+    background: #F3F4F4;
+    margin: 0;
+    cursor: pointer;
+}
+
+.facebookPost .linkkitekstit {
+    padding: 10px;
+}
+
+.facebookPost .poster {
+    display: flex;
+}
+
+.facebookPost .poster div {
+    align-self: center;
+}
+
+.facebookPost .postaus {
+    margin: 10px;
+}
+
+.facebookPost .poster {
+    align-self: center;
+}
+
+.facebookPost .poster img {
+    border-radius: 99px;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    display: block;
+}
+
+.facebookNimi {
+    color: #385898;
+    font-weight: 600;
+}
+
+.facebookAika {
+    color: rgb(97, 103, 112);
+    font-size: 0.9em;
+}
+
+.linkkikuva img {
+    width: 100%;
+}
+
+.facebookPost .facebookMeta {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    border-top: 1px solid #dfe0e0;
+    border-bottom: 1px solid #dfe0e0;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.facebookMeta i {
+    background-image: url("../img/facebook/facebook_sprite3.png");
+    background-size: 73px 496px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    display: block;
+    margin-right: 8px;
+}
+
+.facebookMeta div {
+    display: flex;
+    margin-right: 8px;
+}
+
+.facebookMeta .like {
+    background-position: -19px -443px;
+}
+
+.facebookMeta .comment {
+    background-image: url("../img/facebook/facebook_sprite4.png");
+    background-size: 55px 344px;
+    background-position: 0 -155px;
+}
+
+.facebookMeta .ilmoita img {
+    width: 18px;
+    margin-right: 8px;
+}
+
+.linkkitekstit .linkkiurli, .linkkitekstit .linkkiingressi {
+    color: #696969;
+}
+
+.linkkiotsikko {
+    color: #000;
+    font-size: 1.15em;
+    font-weight: 600;
+    margin: 4px 0;
+}
+
+.facebookMeta .ilmoita {
+    animation: pulse 1.5s infinite;
+}
+
+.facebookButton {
+    background-color: #4267b2;
+    border-color: #4267b2;
+    border-radius: 4px;
+    color: #fff;
+    padding: 10px 16px;
+    margin: 14px 0;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    font-size: 1.1em;
+}
+
+.messageNapit {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.messageNapit div {
+    cursor: pointer;
+}
+
+.messageNapit div:nth-child(1) {
+    margin-right: 10px;
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-filter: drop-shadow(0px 0px 3px rgba(255, 0, 0, 0.9));
+        filter: drop-shadow(0px 0px 3px rgba(255, 0, 0, 0.9));
+    }
+    100% {
+        -webkit-filter: drop-shadow(0px 0px 15px rgba(255, 0, 0, 0.6));
+        filter: drop-shadow(0px 0px 15px rgba(255, 0, 0, 0.6));
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #facebookNavi .eka {
+        display: none;
+    }
+    .facebookSearch .search {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #facebookSidebar {
+        display: none;
+    }
+}

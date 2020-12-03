@@ -1,0 +1,23 @@
+.show-tip-container {
+  background: black;
+  height: 500px;
+  width: 500px;
+  padding: 20px;
+  max-width: 600px;
+  max-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid white;
+  flex-direction: column;
+  margin: auto;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+.show-tip-container i{
+  color: yellow;
+}

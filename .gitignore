@@ -1,0 +1,9 @@
+Windows_NPM_INSTALL.BAT
+Windows_START.BAT
+assets_old/
+node_modules
+.cache/
+dist/
+public/conf.json
+public/dataviz.html
+.DS_Store

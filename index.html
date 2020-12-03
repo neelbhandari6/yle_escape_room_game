@@ -1,0 +1,135 @@
+<!--DOCTYPE html-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+       <title>Escape-peli Alpha v0.2</title>
+        <!-- Babylon.js -->
+        <script>
+            /* Get the documentElement (<html>) to display the page in fullscreen */
+            var elem = document.documentElement;
+            
+            /* View in fullscreen */
+            function openFullscreen() {
+              if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+              } else if (elem.mozRequestFullScreen) { /* Firefox */
+                elem.mozRequestFullScreen();
+              } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                elem.webkitRequestFullscreen();
+              } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                elem.msRequestFullscreen();
+              }
+            }
+            
+            /* Close fullscreen */
+            function closeFullscreen() {
+              if (document.exitFullscreen) {
+                document.exitFullscreen();
+              } else if (document.mozCancelFullScreen) { /* Firefox */
+                document.mozCancelFullScreen();
+              } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+                document.webkitExitFullscreen();
+              } else if (document.msExitFullscreen) { /* IE/Edge */
+                document.msExitFullscreen();
+              }
+            }
+            </script>
+        <style>
+            html, body {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                touch-action: none;
+            }
+            #mainMenu {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              overflow: hidden;
+              z-index: 9999;
+            }
+
+            #renderCanvas {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                touch-action: none;
+                z-index: 4;
+            }
+            .nappi{
+              background-color: #4CAF50;
+              height:50px;
+              width:200px;
+              border-radius: 2em;
+              right: 45%;
+              top: 2%;
+              position: absolute;
+              margin-right: 5px;
+            }
+            .nappi2{
+              background-color: #4CAF50;
+              height:50px;   
+              width:100px;
+              border-radius: 2em;
+              flex-wrap: wrap;
+              position: absolute;
+              right: 40%;
+              top: 2%;
+            }
+            .nappi button:hover {
+              background-color: #333333;
+            }
+        </style>
+    </head>
+<body>
+ <!-- //palauta tämä kun peli alkaa valmistua, full screen ja pelin käynnitstys<div> 
+    <button class="nappi" id="start" onclick="myFunction()">Aloita peli!</button>
+      <script>
+        function myFunction() {
+        var x = document.getElementById("mainMenu");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+          } 
+      </script>
+      <canvas id="mainMenu"></canvas>  
+    <input class="nappi2" id="clickMe" type="button" value="Koko ruutu" onclick="fullScreen();" />
+    </div>
+    <div>
+    <canvas id="renderCanvas" touch-action="none"></canvas>
+    </div>
+    <script>
+       function fullScreen() {
+    var el = document.documentElement
+    , rfs = // for newer Webkit and Firefox
+       el.requestFullScreen
+    || el.webkitRequestFullScreen
+    || el.mozRequestFullScreen
+    || el.msRequestFullScreen
+    ;
+
+    if(typeof rfs!="undefined" && rfs){
+
+        rfs.call(el);
+
+    } else if(typeof window.ActiveXObject!="undefined"){
+
+        // for Internet Explorer
+        var wscript = new ActiveXObject("WScript.Shell");
+
+        if (wscript!=null) {
+          wscript.SendKeys("{F11}");
+        }
+    }
+
+}
+        </script> -->
+    <canvas id="renderCanvas"></canvas>
+    <script src="./src/babylonScene.js"></script>
+  </body>
+</html>

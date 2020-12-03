@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2020 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="error-alt" unicode="&#xe801;" d="M0 350q0 207 147 354t353 146 354-146 146-354-146-354-354-146-353 146-147 354z m164-133l672 0 0 266-672 0 0-266z" horiz-adv-x="1000" />
+
+<glyph glyph-name="cancel" unicode="&#xe802;" d="M724 112q0-22-15-38l-76-76q-16-15-38-15t-38 15l-164 165-164-165q-16-15-38-15t-38 15l-76 76q-16 16-16 38t16 38l164 164-164 164q-16 16-16 38t16 38l76 76q16 16 38 16t38-16l164-164 164 164q16 16 38 16t38-16l76-76q15-15 15-38t-15-38l-164-164 164-164q15-15 15-38z" horiz-adv-x="785.7" />
+
+<glyph glyph-name="lock" unicode="&#xe803;" d="M179 421h285v108q0 59-42 101t-101 41-101-41-41-101v-108z m464-53v-322q0-22-16-37t-38-16h-535q-23 0-38 16t-16 37v322q0 22 16 38t38 15h17v108q0 102 74 176t176 74 177-74 73-176v-108h18q23 0 38-15t16-38z" horiz-adv-x="642.9" />
+
+<glyph glyph-name="retweet" unicode="&#xe804;" d="M250 190l272 0 128-140-448 0q-42 0-71 30t-29 70l0 302-102 0 176 198 174-198-100 0 0-262z m650 60l100 0-174-200-176 200 102 0 0 260-274 0-128 140 450 0q40 0 70-29t30-71l0-300z" horiz-adv-x="1000" />
+
+<glyph glyph-name="lightbulb" unicode="&#xf0eb;" d="M411 529q0-8-6-13t-12-5-13 5-5 13q0 25-30 39t-59 14q-7 0-13 5t-5 13 5 13 13 5q28 0 55-9t49-30 21-50z m89 0q0 40-19 74t-50 57-69 35-76 12-76-12-69-35-50-57-20-74q0-57 38-101 6-6 17-18t17-19q72-85 79-166h127q8 81 79 166 6 6 17 19t17 18q38 44 38 101z m71 0q0-87-57-150-25-27-42-48t-33-54-19-60q26-15 26-46 0-20-13-35 13-15 13-36 0-29-25-45 8-13 8-26 0-26-18-40t-43-14q-11-25-34-39t-48-15-49 15-33 39q-26 0-44 14t-17 40q0 13 7 26-25 16-25 45 0 21 14 36-14 15-14 35 0 31 26 46-2 28-19 60t-33 54-41 48q-58 63-58 150 0 55 25 103t65 79 92 49 104 19 104-19 91-49 66-79 24-103z" horiz-adv-x="571.4" />
+</font>
+</defs>
+</svg>

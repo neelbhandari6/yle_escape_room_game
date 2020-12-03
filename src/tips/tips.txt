@@ -1,0 +1,126 @@
+
+Tipsi tehdään näin:
+
+- src/tips/index.js --> return-objektiin uusi property missä setTime ja clear kuten (ks. muista mallia)
+- avataan tiedosto, jossa halutaan tipsi näyttää. Importoidaan src/tips/index.js ja kutsutaan äsken 
+luotua setTimea 
+
+import "~src/tips/index.js"
+....
+tips.lookAtPoster.setTime(50) // suluissa ajastin sekunteina, joiden kuluessa tips näkyy 
+
+- avataan tiedosto, jossa halutaan tipsi poistaa. Importoidaan src/tips/index.js ja kutsutaan 
+ykköskohdassa luotua clearia. 
+
+import "~src/tips/index.js"
+....
+tips.lookAtPoster.setTime(50) // suluissa ajastin sekunteina, joiden kuluessa tips näkyy 
+
+
+
+
+1. "Mene tietokoneelle" 
+  - name: goToComputer
+  - setTime: aukeaa pelin käynnistymisestä 60 sekuntia (scene.onReadyObservable babylonScene.js:ssä)
+  - clear: pyyhkiytyy kun avaa Twitter-tietokoneen (twitter/index.js)
+
+2   "Katso julistetta"
+   - name: lookAtPoster
+   - setTime: Kaksi väärää yritystä salasanaikkunassa (twitter/loginScreen.js)
+   - clear: clear: pyyhkiytyy kun avaa Matrix-julisteen (babylonScene.js) TAI saa oikean salasanan
+
+
+3. "keneen voit/et voi luottaa" 
+   - name: whomToTrust
+   - setTime: 60 sekuntia Twitter-ikkunan avautumisen jälkeen (twitter/index.js)
+   - clear: kun twitter suljetaan (exitCallback twitter/index.js) TAI openWarehouse babylonScene.js
+
+4. "Etsi ulospääsytie"
+   - name: wayOut
+  - setTime: 120 sekuntia Twitter-ikkunan avautumisen jälkeen (twitter/index.js) 
+   - clear: kun melonikonsoli avataan (lockConsole/index.js)
+
+5. "Onkohan ovessa lukko"
+   - name: isThereALock
+  - setTime: 3 painallusta Warehousen oveen (babylonScene.fi raycast())
+   - clear: kun melonikonsoli avataan (lockConsole/index.js)
+
+
+6. "Kuka on ollut epäluotettava"
+   - name: whoHasBeenUnreliable
+  - setTime: 7-8 yritystä melonissa (lockConsole.js)
+   - clear: oikea vastaus melonissa (lockConsole.js)
+
+7. "Kurkkaapa pyödälle"
+   - name: lookAtAble
+   - setTime: 60 sekuntia siitä kun warehouse avautuu (babylonScene.js)
+   - clear: kun lehti avautuu. (babylonScene) 
+
+8. "Näkyikö lehdessä tuttuja kuvia"
+   - name: familiarPicturesInMagazine
+   - setTime: Kun 3 kertaa painanut ovea (babylonScene.js castRay)
+   - clear: bunkkeri avautuu? (babylonScene) 
+
+9. "Ensimmäisestä huoneesta taisi löytyä myös kuvia."
+   - name: somePicturesInFirstRoom
+   - setTime: Kun lehti suljetaan (magazine/index.js exitButtonCallback)
+   - clear: Kun kamera avautuu (Babylonscene.js)
+
+10. "Löytyykö ensimmäisestä huoneesta kellon kuvia";
+   - name: clockPicturesInFirstRoom
+   - setTime: Kun kamera avataan silloin kun warehousen ovi on jo auki (camera/index.js)
+   – clear: Kun bunkkerin ovi avautuu (babylonScene.js)
+
+11. "Mihin johdot johtavat?";
+   - name: whereWiresLeadTo
+   - setTime: minuutti bunkkerin oven avautumisesta (babylonScene.js)
+   – clear: Kun sähkötaulu avautuu (babylonScene.js)
+
+12. "Sininen, valkoinen, punainen. Mikä kuuluu mihinkin?";
+   - name: blueWhiteRed
+   - setTime: Kun käyttäjä on klikannut johtoja 3 kertaa. (electricControlPanel/index.js)
+   – clear: Kun sähkötaulu sulkeutuu (electricControlPanel/index.js)
+
+13. "Jokaisessa huoneessa on yksi vihje. Tarkkaile värejä."
+   - keepAnEyeOnColors
+   - setTime: minuutti siitä kun sähkötaulu suljettu ja ei ratkaistu (electricControlPanel exitcallback)
+   - clear sähkötaulu ratkaistu  (electricControlPanel/index.js)
+
+14. "tutki tietokoneita."
+   - inspectcomputers
+   - settime: 30 sek siitä kun sähkötaulu ratkaistu (electriccontrolpanel/index.js)
+   - clear: facebook aukeaa (facebook/facebooktemplate.js)
+
+15. "Mikä viesteistä on feikki. 1/3"
+   - whatMessageIsFake
+   - setTime 30 sek siitä kun facebook on avattu bunkkerikoneella renderFacebook facebook/facebooktemplate.js)
+   - clear kun viesti 1kpl koneella ilmiannettu renderFacebook facebook/facebooktemplate.js
+
+16. "Mikä viesteistä on feikki. 2/3"
+   - whatMessageIsFake
+   - setTime 30 sek siitä kun facebook on avattu varastokoneella renderFacebook facebook/facebooktemplate.js
+   - clear kun viesti 1kpl koneella ilmiannettu renderFacebook facebook/facebooktemplate.js
+
+17. "Mikä viesteistä on feikki. 3/3"
+   - whatMessageIsFake
+   - setTime 30 sek siitä kun facebook on avattu asuntokoneella renderFacebook facebook/facebooktemplate.js
+   - clear kun viesti 1kpl koneella ilmiannettu renderFacebook facebook/facebooktemplate.js
+
+18. "Onko näitä jossain lisää?" 1/3
+   - isThereMoreOfThese
+
+18. "Onko näitä jossain lisää?" 2/3
+   - isThereMoreOfThese
+
+
+18. "Onko näitä jossain lisää?" 3/3
+   - isThereMoreOfThese
+
+FACEBOOK tipsit
+
+warehousePuzzle1.js:
+const tips = ["authenticPictures", "misspellings"];
+
+flatPuzzle2.js:
+const tips = ["newsSources", "trustPublisher"]
+

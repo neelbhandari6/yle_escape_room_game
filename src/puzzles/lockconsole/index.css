@@ -1,0 +1,147 @@
+.select-disable {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.letter-slider {
+    top: 38%;
+    left: 16.5%;
+    height: 37%;
+    width: 9%;
+    position: absolute;
+    height: 100%;
+    user-select: none;
+}
+
+
+#slider-1 {
+    left: 16.5%;
+}
+
+
+#slider-2 {
+    left: 28.3%;
+}
+
+#slider-3 {
+    left: 40.1%;
+}
+
+#slider-4 {
+    left: 51.9%;
+}
+
+#slider-5 {
+    left: 63.7%;
+}
+
+#slider-6 {
+    left: 75.4%;
+}
+#consoleLock #loading {
+width: 100%;
+height: 100%;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+position: absolute;
+background: black;
+top: 0;
+z-index:999;
+}
+
+
+
+
+
+
+
+.letter-slider > img {
+    height: auto;
+    width: 100%;
+}
+
+.visible-part {
+    top: 2px;
+    position: absolute;
+    width: 100%;
+    height: 37%;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.visible-part img {
+    width: 100%;
+    position: relative;
+    filter: brightness(1.5)
+}
+
+.up-arrow {
+    width: 100%;
+    height: 60px;
+    border: 0px dashed red;
+    position: relative;
+    top: -40px;
+    cursor: pointer;
+}
+
+.target {
+    height: 10%;
+    height: 10%;
+    width: 100%;
+    top: 14%;
+    position: absolute;
+}
+
+.shadowed-up {
+    position: absolute;
+    width: 100%;
+    height: 16%;
+    background-image: linear-gradient(to top, rgba(255,255,255, 0), rgba(0,0,0,0.6) 40%);
+}
+
+
+
+
+
+
+.shadowed-down {
+    position: absolute;
+    width: 100%;
+    height: 15.8%;
+    top: 22%;
+    background-image: linear-gradient(to bottom, rgba(255,255,255, 0), rgba(0,0,0,0.6) 40%)
+
+}
+
+
+.down-arrow {
+    width: 100%;
+    height: 60px;
+    border: 0px dashed blue;
+    position: relative;
+    bottom: -93px;
+
+    cursor: pointer;
+}
+
+#consoleLock {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left:0;
+    top:0;
+    height: 500px;
+    width: 500px;
+    margin:auto;
+}
+
+#consoleLock #console-background {
+    width: 100%;
+}
+
+
