@@ -4,7 +4,7 @@ import pointerLockEvents from "~/src/helpers/pointerLockEvents.js"
 let advancedTexture;
 
     var text1 = new BABYLON.GUI.TextBlock();
-     text1.text = "Ladataan";
+     text1.text = "Loading";
     text1.color = "white";
     text1.fontSize = 24;
 

@@ -6,7 +6,7 @@ export function displayLoadingUI () {
     
     this._loadingDiv = document.createElement("div");
     this._loadingDiv.id = "customLoadingScreenDiv";
-    this._loadingDiv.innerHTML = "<div style='display: flex; justify-content: center;align-items: center; height:100%; width: 100%;'><div style='color:white; font-size: 20px; height: 30px;' id='loading-message'> Ladataan...</div></div>";
+    this._loadingDiv.innerHTML = "<div style='display: flex; justify-content: center;align-items: center; height:100%; width: 100%;'><div style='color:white; font-size: 20px; height: 30px;' id='loading-message'> Loading...</div></div>";
     var customLoadingScreenCss = document.createElement('style');
     customLoadingScreenCss.type = 'text/css';
     customLoadingScreenCss.innerHTML = `

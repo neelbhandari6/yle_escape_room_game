@@ -4,7 +4,7 @@ const assetsManager = (() => {
   const store = (BABYLON, scene) => {
     assetsManager = new BABYLON.AssetsManager(scene);
     assetsManager.onProgress = function(remainingCount, totalCount, lastFinishedTask) {
-      const message = 'Ladataan ' 
+      const message = 'Loading ' 
       document.getElementById("loading-message").innerHTML = message
   };
   

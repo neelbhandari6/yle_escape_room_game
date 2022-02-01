@@ -157,7 +157,7 @@ const consoleLockPuzzle = function (doorTrigger) {
               <img src=${consoleClosed} style="width: 0; height: 0" />
             </div>
             <div id="loading">
-              LADATAAN
+              LOADING
             </div>`
         : html``}
       <img src=${consoleBackground} id="console-background" />

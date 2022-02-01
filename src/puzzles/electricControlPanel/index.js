@@ -158,7 +158,7 @@ const FlatPuzzle = function (scene, sounds) {
         <img src=${consoleClosed} style="width: 0; height: 0" />
 ${Object.values(wireImages).map(e => html`<img src=${e} style="width: 0; height: 0">`)}
 </div>
-        <div id="loading">LADATAAN</div>-`
+        <div id="loading">LOADING</div>-`
          : html``}
       </div>
     </div>
