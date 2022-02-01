@@ -3,7 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-       <title>Escape-peli Alpha v0.2</title>
+       <title>Escape Room CGVR</title>
         <!-- Babylon.js -->
         <script>
             /* Get the documentElement (<html>) to display the page in fullscreen */
@@ -85,50 +85,7 @@
         </style>
     </head>
 <body>
- <!-- //palauta tämä kun peli alkaa valmistua, full screen ja pelin käynnitstys<div> 
-    <button class="nappi" id="start" onclick="myFunction()">Aloita peli!</button>
-      <script>
-        function myFunction() {
-        var x = document.getElementById("mainMenu");
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";
-        }
-          } 
-      </script>
-      <canvas id="mainMenu"></canvas>  
-    <input class="nappi2" id="clickMe" type="button" value="Koko ruutu" onclick="fullScreen();" />
-    </div>
-    <div>
-    <canvas id="renderCanvas" touch-action="none"></canvas>
-    </div>
-    <script>
-       function fullScreen() {
-    var el = document.documentElement
-    , rfs = // for newer Webkit and Firefox
-       el.requestFullScreen
-    || el.webkitRequestFullScreen
-    || el.mozRequestFullScreen
-    || el.msRequestFullScreen
-    ;
 
-    if(typeof rfs!="undefined" && rfs){
-
-        rfs.call(el);
-
-    } else if(typeof window.ActiveXObject!="undefined"){
-
-        // for Internet Explorer
-        var wscript = new ActiveXObject("WScript.Shell");
-
-        if (wscript!=null) {
-          wscript.SendKeys("{F11}");
-        }
-    }
-
-}
-        </script> -->
     <canvas id="renderCanvas"></canvas>
     <script src="./src/babylonScene.js"></script>
   </body>
