@@ -9,7 +9,7 @@ let advancedTexture;
     text1.fontSize = 24;
 
 
-  var button = BABYLON.GUI.Button.CreateSimpleButton("but", "Sulje");
+  var button = BABYLON.GUI.Button.CreateSimpleButton("but", "Back");
     button.width = 0.2;
     button.height = "40px";
     button.color = "white";

@@ -1,6 +1,6 @@
 $(function () {
 
-    //////  NÄYTTÄÄ/PIILOTTAA TWITTER PROFIILINÄKYMÄN
+   
 
     $(".banana").on("click", function () {
         console.log("banana");

@@ -81,7 +81,7 @@ const FlatPuzzle = function (noLogin) {
         </div>
         <div class="profileOtsikko">
           <div class="handle">${handle}</div>
-          <div class="harmaa">${tweetsTotal} twiittiä</div>
+          <div class="harmaa">${tweetsTotal} tweets</div>
         </div>
       </div>
       <div class="profiiliTaustakuva">
@@ -91,7 +91,7 @@ const FlatPuzzle = function (noLogin) {
         <div class="pic">
           <img src="img/twitter/${profilePic}" />
         </div>
-        <div class="seuraa">Seuraa</div>
+        <div class="seuraa">Follow</div>
       </div>
       <div class="metaWrapper">
         <div class="handle">${realName} ${handle}</div>
@@ -105,8 +105,8 @@ const FlatPuzzle = function (noLogin) {
           </div>
         </div>
         <div class="seuraukset">
-          <div>${followers} <span class="harmaa">seurattua</span></div>
-          <div>${following}<span class="harmaa">seuraajaa</span></div>
+          <div>${followers} <span class="harmaa">following</span></div>
+          <div>${following}<span class="harmaa">followers</span></div>
         </div>
         <div class="tweets-profile">
         ${profileTweets.map(e => Tweet(Tweets[e]))}

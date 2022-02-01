@@ -7,7 +7,7 @@ export const Profiles = {
     handle: "@laura_banana",
     tweetsTotal: "220",
     desc:
-      "Mother, spouse, canine, teacher and amateur gardener. Tweet in Finnish.",
+      "Mother, spouse, canine, teacher and amateur gardener. Tweet in English.",
     followers: "332",
     following: "207",
     background: "bananatausta.jpg",
@@ -36,7 +36,7 @@ export const Profiles = {
     followers: "2001",
     following: "7",
     background: "melonitausta.jpg",
-    joined: "3 päivää sitten",
+    joined: "3 days ago",
     profileTweets: [6, 7, 8]
   },
 };

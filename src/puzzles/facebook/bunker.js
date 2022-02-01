@@ -9,7 +9,7 @@ const FlatPuzzle = function (posts) {
     time: "13:45",
     profilePic: "img/avatar.png",
     linkPic: "img/rockefeller.jpg",
-    linkUrl: "iltahuuto.fi",
+    linkUrl: "afternoonnews.com",
     code: "RI",
     fake: true, 
     linkHeader: "Venice is now skating on the canals!",
@@ -23,7 +23,7 @@ const FlatPuzzle = function (posts) {
     code: "XY",
     profilePic: "img/avatar.png",
     linkPic: "https://images.cdn.yle.fi/image/upload//w_1198,h_674,f_auto,fl_lossy,q_auto:eco/39-4124585953cb79be91a",
-    linkUrl: "mikrobitti.fi",
+    linkUrl: "microbit.com",
     linkHeader: "The data was teleported for the first time",
     linkDesc: "Study appropriately before the futuristic-sounding 2020. Researchers at the University of Technology in Bristol and Denmark announced that they had, for the first time, made a quantum leap between two computer chips without being physically or electronically connected to each other. The technology is based on a quantum phenomenon called interleaving, New Atlas says.",
   } 

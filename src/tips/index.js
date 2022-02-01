@@ -18,7 +18,7 @@ let puzzleWindow;
     <div
       class="show-tip-container">
    ${checkIfNoGlow()
-     ? html`<p>Ei vihjeitä</p>`
+     ? html`<p>No hints</p>`
      : Object.keys(tipData).map(e => {
      if(tipData[e].removed || !tipData[e].text) return 
      return html`

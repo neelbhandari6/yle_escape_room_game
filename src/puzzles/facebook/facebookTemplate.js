@@ -83,11 +83,11 @@ const post = (
     >
       <div>
         <div><i class="like"></i></div>
-        <div>Tykkää</div>
+        <div>Likes</div>
       </div>
       <div>
         <div><i class="comment"></i></div>
-        <div>Kommentoi</div>
+        <div>Comments</div>
       </div>
       <div
       class="ilmoita-container"
@@ -151,13 +151,13 @@ const FlatPuzzle = function (posts, puzzleCode) {
         <div class="vasen">
           <div><i class="logo"></i></div>
           <div class="facebookSearch">
-            <div>Haku</div>
+            <div>Search</div>
             <div><i class="search"></i></div>
           </div>
         </div>
         <div class="oikea">
-          <div class="eka"><span>Etusivu</span></div>
-          <div><span>Luo</span></div>
+          <div class="eka"><span>Front Page</span></div>
+          <div><span>Round</span></div>
           <div><i class="kp"></i></div>
           <div><i class="msg"></i></div>
           <div><i class="ntf"></i></div>
@@ -167,7 +167,7 @@ const FlatPuzzle = function (posts, puzzleCode) {
         <div id="facebookSidebar">
           <div>
             <div><i class="uutiset"></i></div>
-            <div>Uutiset</div>
+            <div>News</div>
           </div>
           <div>
             <div><i class="messenger"></i></div>
@@ -183,19 +183,19 @@ const FlatPuzzle = function (posts, puzzleCode) {
           </div>
           <div>
             <div><i class="tapahtumat"></i></div>
-            <div>Tapahtumat</div>
+            <div>Proceedings</div>
           </div>
           <div>
             <div><i class="sivut"></i></div>
-            <div>Sivut</div>
+            <div>Pages</div>
           </div>
           <div>
             <div><i class="ryhmat"></i></div>
-            <div>Ryhmät</div>
+            <div>Element</div>
           </div>
           <div>
             <div><i class="muistot"></i></div>
-            <div>Muistot</div>
+            <div>Memorabilia</div>
           </div>
         </div>
         <div id="facebookContent">

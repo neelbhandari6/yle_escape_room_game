@@ -11,7 +11,7 @@ const FlatPuzzle = function (posts) {
     code: "ÖM",
     profilePic: "img/avatar.png",
     linkPic: "https://images.cdn.yle.fi/image/upload//w_1198,h_674,f_auto,fl_lossy,q_auto:eco/39-6419515e44070277d31.jpg",
-    linkUrl: "mediuutiset.fi",
+    linkUrl: "medianews.com",
     linkHeader: "Doctors are warning egg-throwers",
     linkDesc: "British doctors have been concerned about the ejection of eggs towards people, which has become a fashion phenomenon. They warn that this kind of harmless-looking spoilage could cause serious harm. In Britain, protesters have also increasingly started bombing politicians with eggs, for example. A survey by Royal Liverpool University Hospital found that 13 people who had received an egg in the eye had been treated at the hospital in the last 14 months.",
   } 
