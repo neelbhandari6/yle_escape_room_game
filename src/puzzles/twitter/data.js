@@ -7,7 +7,7 @@ export const Profiles = {
     handle: "@laura_banana",
     tweetsTotal: "220",
     desc:
-      "Äiti, puoliso, koiraihminen, opettaja ja harrastelijapuutarhuri. Twiittaa suomeksi.",
+      "Mother, spouse, canine, teacher and amateur gardener. Tweet in Finnish.",
     followers: "332",
     following: "207",
     background: "bananatausta.jpg",
@@ -20,7 +20,7 @@ export const Profiles = {
     handle: "@OliverTheOrange",
     tweetsTotal: "462",
     desc:
-      "Ensihoitaja, joka harrastaa luontoliikunta monessa muodossa: patikointia, suunnistusta ja geokätköilyä. Mukana usein myös jälkikasvua.",
+      "A paramedic who enjoys nature sports in many forms: hiking, orienteering and geocaching. Offspring are often also involved.",
     followers: "345",
     following: "512",
     background: "orangetausta.jpg",
@@ -32,7 +32,7 @@ export const Profiles = {
     profilePic: "meloni.jpg",
     handle: "@Meloni_6745792",
     tweetsTotal: "122",
-    desc: "",
+    desc: "I am the answer to everything",
     followers: "2001",
     following: "7",
     background: "melonitausta.jpg",
@@ -45,10 +45,10 @@ export const Tweets = [
   {
     profilePic: Profiles["laura_banana"].profilePic,
     handle: "laura_banana",
-    tweet: html`Uskallatteko ottaa teidän lapsille influessarokotetta? Jos siitä
-      tuleekin narkolepsiaa :( Toisaalta
-      <span class="twitterHashtags"><b>#rokotteet</b></span>
-      kai pitäis ottaa. Pelottaa vähän.`,
+    tweet: html`Do you dare to take the flu vaccine for your children? If about it
+      there will be narcolepsy :( On the other hand
+      <span class="twitterHashtags"><b>#vaccines</b></span>
+      I guess I should take. A little scared.`,
     comments: "3",
     showOnTimeline: true,
     retweets: "1",
@@ -62,9 +62,9 @@ export const Tweets = [
     profilePic: Profiles["laura_banana"].profilePic,
     handle: "laura_banana",
     tweet: html`
-    Nyt se on päätetty: meidän perheeseen tulee kuin tuleekin uusi iiiiihana koiranpentu. En kestä 
-    ❤️❤️❤️ <span class="twitterHashtags"><b>#koirakuume</b></span>
-    <span class="twitterHashtags"><b>#uusiperheenjäsen</b></span>
+    Now it’s decided: our family is going to have a new iiiiihana puppy. I can not take it
+    ❤️❤️❤️ <span class="twitterHashtags"><b>#vaccines</b></span>
+    <span class="twitterHashtags"><b>#family</b></span>
     <span class="twitterHashtags"><b>#inlove</b></span>
     `,
     comments: "0",
@@ -80,8 +80,8 @@ export const Tweets = [
     profilePic: "opettaja.jpg",
     handle: "@suokkilainen35",
     tweet: html`
-    Suomalaiset opettajat ovat huippuja - kaikesta paineesta huolimatta.`,
-    newsHeader: "Riittävään vuorovaikutukseen ei ole tarpeeksi aikaa",
+    Finnish teachers are top - despite all the pressure.`,
+    newsHeader: "There is not enough time for enough interaction",
     newsPic: "img/twitter/opettaja-uutinen.jpg",
     comments: "12",
     retweet: true,
@@ -96,10 +96,10 @@ export const Tweets = [
   {
     profilePic: Profiles["OliverTheOrange"].profilePic,
     handle: "OliverTheOrange",
-    tweet: html`Suomessa kaikki viranomaiset suosittelevat ottamaan rokotteen.
-      Mars matkaan!
+    tweet: html`In Finland, all authorities recommend taking the vaccine.
+      Mars's journey!
       <span class="twitterHashtags"
-        ><b>#rokotteet</b> #immuniteetti #terveys</span
+        ><b>#rokotteet</b> #immunity #health</span
       >`,
     comments: "17",
     retweets: "14",
@@ -114,7 +114,7 @@ export const Tweets = [
     profilePic: "selena.jpg",
     handle: "@sekoHelsinki92",
     tweet: html``,
-    newsHeader: "Kiireettömät tapaukset kuormittavat ensihoitoa",
+    newsHeader: "Urgent cases burden the first aid",
     newsPic: "img/twitter/ensihoito.jpg",
     comments: "12",
     retweet: true,
@@ -129,7 +129,7 @@ export const Tweets = [
   {
     profilePic: Profiles["OliverTheOrange"].profilePic,
     handle: "OliverTheOrange",
-    tweet: html`Hakusessa järjestelmäkamera. Suosituksia? Hintaluokka max 1000 e ja käyttötarkoitus enimmäkseen luontokuvausta mutta toimittava myös fudiskentän laidalla :o)
+    tweet: html`Searching for a SLR camera. Recommendations? Price range max 1000 e and purpose of use mostly nature photography but also work on the edge of the football field: o)
     `,
     comments: "8",
     retweets: "1",
@@ -143,9 +143,9 @@ export const Tweets = [
   {
     profilePic: Profiles["Meloni_6745792"].profilePic,
     handle: "Meloni_674",
-    tweet: html`Virossa on ollut 3542 kuollutta ihmistä rokottamisessa! Mieti mitä roskaa he ruokkivat sinua!
+    tweet: html`There have been 3,542 deaths in Estonia from vaccination! Think about what rubbish they are feeding you!
       <span class="twitterHashtags"
-        ><b>#rokotteet #influessa #salaliitto</b>
+        ><b>#vaccines #influessa #conspiracy</b>
       </span>
       bit.ly/p/skdjKSDisjd...
       `,
