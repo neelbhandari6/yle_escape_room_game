@@ -12,8 +12,8 @@ const FlatPuzzle = function (posts) {
     linkUrl: "iltahuuto.fi",
     code: "RI",
     fake: true, 
-    linkHeader: "Venetsiassa luistellaan nyt kanaaleilla!",
-    linkDesc: "Nopeasti etenevä ilmastonmuutos tuottaa poikkeuksellisia sääilmiöitä myös Euroopassa. Venetsialaisia kohtasi hämmästyttävä näky, kun he heräsivät tiistaiaamuna: kaupungin kuuluisat kanaalit olivat umpijäässä. Koska gondoliliikenne oli jumissa, kaupunkilaiset eivät päässeet työpaikoilleen. Moni käyttikin ylimääräisen vapaapäivän luistelemalla kanaaleja pitkin.",
+    linkHeader: "Venice is now skating on the canals!",
+    linkDesc: "Rapidly advancing climate change is also producing exceptional weather events in Europe. The Venetians were struck by an amazing sight as they woke up on Tuesday morning: the city’s famous canals were closed. Because the gondola traffic was stuck, the townspeople could not get to their jobs. Indeed, many spent an extra day skating along the canals.",
   } 
   
   const secondPost = {
@@ -24,8 +24,8 @@ const FlatPuzzle = function (posts) {
     profilePic: "img/avatar.png",
     linkPic: "https://images.cdn.yle.fi/image/upload//w_1198,h_674,f_auto,fl_lossy,q_auto:eco/39-4124585953cb79be91a",
     linkUrl: "mikrobitti.fi",
-    linkHeader: "Tiedon teleporttaaminen onnistui ensimmäistä kertaa",
-    linkDesc: "Juuri sopivasti ennen futuristiselta kuulostavaa vuotta 2020 Bristolin ja Tanskan teknisen yliopiston tutkijat ilmoittivat saaneensa ensimmäisen kerran aikaan kvanttihypyn kahden tietokonesirun välillä ilman, että ne olisivat fyysisesti tai elektronisesti yhteydessä toisiinsa. Tekniikka perustuu lomittumiseksi kutsuttuun kvantti-ilmiöön, New Atlas kertoo.",
+    linkHeader: "The data was teleported for the first time",
+    linkDesc: "Study appropriately before the futuristic-sounding 2020. Researchers at the University of Technology in Bristol and Denmark announced that they had, for the first time, made a quantum leap between two computer chips without being physically or electronically connected to each other. The technology is based on a quantum phenomenon called interleaving, New Atlas says.",
   } 
 
   const thirdPost = {
