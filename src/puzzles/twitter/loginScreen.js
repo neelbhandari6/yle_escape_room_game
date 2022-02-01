@@ -72,12 +72,12 @@ const Markup = () => html`<div class="login-screen">
   </div>
   <main class="input-container">
     ${answers.loginDisabled 
-      ? html`<section>Siirrytään järjestelmään</section>`
+      ? html`<section>Let's move on</section>`
       :html`<section class="inputWithIcon">
       <input type="text" placeholder="" class="psw_input" />
       <i class="icon-lock" aria-hidden="true"></i>
     ${textToShow()}
-    <button type="button" @click="${() => getInputValue()}">Kirjaudu</button>
+    <button type="button" @click="${() => getInputValue()}">Sign in</button>
       </section>`}
   </main>
 </div>`;
