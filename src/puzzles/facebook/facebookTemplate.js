@@ -95,7 +95,7 @@ const post = (
       >
       <div>
         <div class="ilmoita"   > ${!picked ? html`<img src="img/facebook/ilmoita.png" />` : ``}</div>
-        <div>${picked? `Ilmoitettu` : "Ilmoita fakenews"}</div>
+        <div>${picked? `Reported` : "Report Fakenews"}</div>
       </div>
       </div>
     </div>
@@ -119,8 +119,8 @@ return html`
         }}"
         >&times;</span
       >
-      <p>Kiitos ilmoituksestasi!</p> 
-      <p>Mielestäsi uutinen <b>${State.currentHeader}</b> on valheellinen. Muista, että voit ilmoittaa vain yhden näistä kolmesta uutisesta valeuutiseksi.</p>
+      <p>Thank you for your notification!</p> 
+      <p>You think the news <b>${State.currentHeader}</b> is false. Remember that you can only report one of these three news stories as fake news.</p>
     </div>
   </div>
 `};
