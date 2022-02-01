@@ -12,8 +12,8 @@ const FlatPuzzle = function (posts) {
     profilePic: "img/avatar.png",
     linkPic: "https://images.cdn.yle.fi/image/upload//w_1198,h_674,f_auto,fl_lossy,q_auto:eco/39-6419515e44070277d31.jpg",
     linkUrl: "mediuutiset.fi",
-    linkHeader: "Lääkärit varoittelevat munanheittäjiä",
-    linkDesc: "Brittilääkärit ovat huolestuneet muoti-ilmiöksi nousseesta kananmunien heittelystä ihmisiä kohti. He varoittavat, että tämänkaltainen harmittomalta vaikuttava pilailu saattaa aiheuttaa vakavia vahinkoja. Britanniassa myös mielenosoittajat ovat ruvenneet yhä useammin pommittamaan esimerkiksi poliitikkoja kananmunilla. Royal Liverpool University Hospitalin kartoituksessa todettiin, että viimeisen 14 kuukauden aikana sairaalassa oli hoidettu 13:a munan silmään saanutta.",
+    linkHeader: "Doctors are warning egg-throwers",
+    linkDesc: "British doctors have been concerned about the ejection of eggs towards people, which has become a fashion phenomenon. They warn that this kind of harmless-looking spoilage could cause serious harm. In Britain, protesters have also increasingly started bombing politicians with eggs, for example. A survey by Royal Liverpool University Hospital found that 13 people who had received an egg in the eye had been treated at the hospital in the last 14 months.",
   } 
   
   const secondPost = {
@@ -24,8 +24,8 @@ const FlatPuzzle = function (posts) {
     profilePic: "img/avatar.png",
     linkPic: "https://images.cdn.yle.fi/image/upload//w_1198,h_674,f_auto,fl_lossy,q_auto:eco/39-6576235e7b6892be4a3.jpg",
     linkUrl: "hs.fi/tiede",
-    linkHeader: "Legopalikka säilyy merivedessä jopa tuhat vuotta ennen kuin murenee",
-    linkDesc: "Käytetty legopalikka on meressä ongelma pitkään. Muovinen palikka voi säilyä merenpohjassa ainakin sata, jopa 1 300 vuotta. Tämän selvittivät Plymouthin yliopiston tutkijat. He tutkivat, miten nämä lasten suosimat lelut kestävät suolaista merivettä.",
+    linkHeader: "A lego block remains in seawater for up to a thousand years before it crumbles",
+    linkDesc: "The used lego block has been a problem in the ocean for a long time. A plastic block can survive on the seabed for at least a hundred, up to 1,300 years. This was clarified by researchers at the University of Plymouth. They study how these children’s favorite toys withstand salty seawater.",
   } 
 
   
@@ -37,8 +37,8 @@ const FlatPuzzle = function (posts) {
     profilePic: "img/avatar.png",
     linkPic: "https://images.cdn.yle.fi/image/upload//w_1198,h_674,f_auto,fl_lossy,q_auto:eco/17-10076543ba994c56ee.jpg",
     linkUrl: "totuusuutiset.com",
-    linkHeader: "Merisuola parantaa vatsan toimintaa",
-    linkDesc: "Jotkut väittää, että suola on vaarallista, mutta se ei pidä paikkansa. Missourin Yliopiston tutkijat on tutkinut, että merisuola parantaa vatsan toiminta. Sitä kannattaa syödä ruokalusikallinen päivässä. Se saa kehon kuona-aineet liikkeelle."
+    linkHeader: "Sea salt improves the function of the stomach",
+    linkDesc: "Some argue that salt is dangerous, but that is not the case. Researchers at the University of Missouri have studied that sea salt improves abdominal function. It is worth eating a tablespoon a day. It mobilizes the body's waste products."
   } 
 
 
