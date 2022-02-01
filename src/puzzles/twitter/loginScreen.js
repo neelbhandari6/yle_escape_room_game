@@ -44,21 +44,21 @@ if (inputVal.length === 0 ) return false
 const textToShow = () => {
   if(answers.processing) {
 
-    return html`<p>Hetki...</p>`
+    return html`<p>Wait...</p>`
   }
 
   if(!answers.processing && answers.correctAnswer) {
-    return html`<p>Hyväksytty. Siirrytään järjestelmään...</p>`
+    return html`<p>Success, let's move ahead...</p>`
   }
 
   else if(!answers.processing && answers.wrongAnswers === 0) {
-    return html`<p>Syötä salasana</p>`
+    return html`<p>Enter the password</p>`
   }
 
   else {
     if(answers.wrongAnswers === 2) tips.lookAtPoster.setTime(0) 
-    return html`<div><p>Pääsy estetty</p>
-    <small>Epäonnistuneita yrityksiä kpl: ${answers.wrongAnswers}</small>
+    return html`<div><p>Access denied</p>
+    <small>Number of failed attempts: ${answers.wrongAnswers}</small>
     </div>`
   }
 }
