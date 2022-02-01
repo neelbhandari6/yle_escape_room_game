@@ -1,7 +1,3 @@
-// Näitä ei ilmeisesti enää käytetä niin kommentoitu
-//import deleteObjectOnPick from "./helpers/deleteObjectOnPick.js";
-//import virtualJoystick from "./helpers/virtualJoystick.js";
-//import addMetadataToMesh from "./helpers/addMetadataToMesh.js";
 
 import "pepjs";
 import * as dat from "dat.gui";
