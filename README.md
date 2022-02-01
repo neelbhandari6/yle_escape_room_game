@@ -1,3 +1,3 @@
-# babylonJs_sample_server
+# VR Escape Room using Babylon.js - CGVR Project
 A simple nodeJs express server.
-"# yle_escape_room_game" 
+
