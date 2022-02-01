@@ -100,67 +100,67 @@ const tips = (() => {
 
   return {
     goToComputer: {
-      setTime: (seconds) => create("goToComputer", "Mene koneelle.", seconds),
+      setTime: (seconds) => create("goToComputer", "Go to the Computer.", seconds),
       clear: () => destroy("goToComputer"),
     },
     lookAtPoster: {
-      setTime: (seconds) => create("lookAtPoster", "Katsele ympärillesi, näkyykö missään tekstiä?", seconds),
+      setTime: (seconds) => create("lookAtPoster", "Look around you, is there any text anywhere?", seconds),
       clear: () => destroy("lookAtPoster"),
     },
     whomToTrust: {
-      setTime: (seconds) => create("whomToTrust", "Keneen voit luottaa? Keneen et voi?", seconds),
+      setTime: (seconds) => create("whomToTrust", "Who can you trust? Who can't you?", seconds),
       clear: () => destroy("whomToTrust"),
     },
     wayOut: {
-      setTime: (seconds) => create("wayOut", "Oletko kokeillut etsiä tietä ulos?", seconds),
+      setTime: (seconds) => create("wayOut", "Have you tried finding a way out?", seconds),
       clear: () => destroy("wayOut"),
     },
     isThereALock: {
-      setTime: (seconds) => create("isThereALock", "Onkohan oven tuntumassa lukko?", seconds),
+      setTime: (seconds) => create("isThereALock", "Is there a lock near the door?", seconds),
       clear: () => destroy("isThereALock"),
     },
     whoHasBeenUnreliable: {
-      setTime: (seconds) => create("whoHasBeenUnreliable", "Kuka on ollut epäluotettava?", seconds),
+      setTime: (seconds) => create("whoHasBeenUnreliable", "Who has been unreliable?", seconds),
       clear: () => destroy("whoHasBeenUnreliable"),
     },
     lookAtTable: {
-      setTime: (seconds) => create("lookAtTable", "Kurkkaapa pöydälle.", seconds),
+      setTime: (seconds) => create("lookAtTable", "Take a look at the table.", seconds),
       clear: () => destroy("lookAtTable"),
     },
     familiarPicturesInMagazine: {
-      setTime: (seconds) => create("familiarPicturesInMagazine", "Näkyikö lehdessä tuttuja kuvia?", seconds),
+      setTime: (seconds) => create("familiarPicturesInMagazine", "Did you see any familiar pictures in the magazine?", seconds),
       clear: () => destroy("familiarPicturesInMagazine"),
     },
     somePicturesInFirstRoom: {
-      setTime: (seconds) => create("somePicturesInFirstRoom", "Ensimmäisestä huoneesta taisi löytyä myös kuvia.", seconds),
+      setTime: (seconds) => create("somePicturesInFirstRoom", "There may also be pictures in the first room.", seconds),
       clear: () => destroy("somePicturesInFirstRoom"),
     },
     clockPicturesInFirstRoom: {
-      setTime: (seconds) => create("clockPicturesInFirstRoom", "Löytyykö ensimmäisestä huoneesta kuvia kellosta?", seconds),
+      setTime: (seconds) => create("clockPicturesInFirstRoom", "Are there pictures of the clock in the first room?", seconds),
       clear: () => destroy("clockPicturesInFirstRoom"),
     },
     whereWiresLeadTo: {
-      setTime: (seconds) => create("whereWiresLeadTo", "Minne johdot johtavat?", seconds),
+      setTime: (seconds) => create("whereWiresLeadTo", "Where do the wires lead?", seconds),
       clear: () => destroy("whereWiresLeadTo"),
     },
     blueWhiteRed: {
-      setTime: (seconds) => create("blueWhiteRed", "Sininen, valkoinen, punainen. Mikä kuuluu mihinkin?", seconds),
+      setTime: (seconds) => create("blueWhiteRed", "Blue, white, red. What belongs to which?", seconds),
       clear: () => destroy("blueWhiteRed"),
     },
     keepAnEyeOnColors: {
-      setTime: (seconds) => create("keepAnEyeOnColors", "Jokaisessa huoneessa on vihje. Pidä silmällä värejä.", seconds),
+      setTime: (seconds) => create("keepAnEyeOnColors", "Each room has a hint. Keep an eye on the colors.", seconds),
       clear: () => destroy("keepAnEyeOnColors"),
     },
     inspectComputers: {
-      setTime: (seconds) => create("inspectComputers", "Tutki tietokoneita.", seconds),
+      setTime: (seconds) => create("inspectComputers", "Examine the computers.", seconds),
       clear: () => destroy("inspectComputers"),
     },
     whatMessageIsFake: {
-      setTime: (seconds, puzzleCode) => create(`whatMessageIsFake_${puzzleCode}`, "Mikä viesteistä on feikki?", seconds),
+      setTime: (seconds, puzzleCode) => create(`whatMessageIsFake_${puzzleCode}`, "Which of the messages is fake?", seconds),
       clear: (puzzleCode) => destroy(`whatMessageIsFake_${puzzleCode}`),
     },
     isThereMoreOfThese: {
-      setTime: (seconds, puzzleCode) => create(`isThereMoreOfThese_${puzzleCode}`, "Löytyykö näitä vielä jostain lisää?", seconds),
+      setTime: (seconds, puzzleCode) => create(`isThereMoreOfThese_${puzzleCode}`, "Are there any more?", seconds),
       clear: (puzzleCode) => {
         if (puzzleCode === "bunkerPuzzle2") {
           return null
@@ -181,10 +181,10 @@ const tips = (() => {
       { 
 
         const textAlts = {
-          "0": "Yhtään uutista ei ole ilmoitettu oikein", 
-          "1": "Vain yksi uutinen ilmoitettu oikein.", 
-          "2": "Vain kaksi uutista ilmoitettu oikein.", 
-          "3": "3/3 uutisista ilmoitettu oikein."
+          "0": "No news has been reported correctly", 
+          "1": "Only one news item reported correctly.", 
+          "2": "Only one news item reported correctly.", 
+          "3": "3/3 of the news reported correctly."
         }
 
         const text = textAlts[JSON.stringify(value)]
