@@ -56,8 +56,8 @@ const assetsManager = (() => {
         taskFlat.loadedMeshes[0].position = BABYLON.Vector3.Zero();
       //  taskFlat.freezeWorldMatrix();
         const array = taskFlat.loadedMeshes;
-        const lockconsoleOpen = taskFlat.loadedMeshes.find(e => e.name === "room1_lockconsole_open")
-        lockconsoleOpen.visibility = 1;
+        const lukkokonsoliAuki = taskFlat.loadedMeshes.find(e => e.name === "huone1_Lukkokonsoli_auki")
+        lukkokonsoliAuki.visibility = 1;
         const naytto = taskFlat.loadedMeshes.find(e => e.name === "Huone1_Naytto_Avattu")
         naytto.visibility = 0;
       };
