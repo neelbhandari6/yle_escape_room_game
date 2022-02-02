@@ -869,11 +869,10 @@ rayHelper.show(scene);  */
   }
   //#endregion
 
-  //#region Muita modeleita ja partikeleita
-
+  //#region Other models and particles
   //#region
   
-  //#region Tv-ruutu
+  //#region Tv-screen
 	var tvScreenVideo = BABYLON.MeshBuilder.CreatePlane("planeTv",{width: 12.5, height: 6.3}, scene);
     tvScreenVideo.position = new BABYLON.Vector3(39,9.5,-5.2);
     tvScreenVideo.rotation.y = -0.35;
@@ -886,7 +885,7 @@ rayHelper.show(scene);  */
   //#endregion
 
   //#region  Collision imposters
-  // Flat/Huoneisto collision objektien ympärille
+  // Flat/ Apartment Collision around objects
   var flatBox1 = BABYLON.MeshBuilder.CreateBox(
     "f_box1",
     { height: 2, width: 20, depth: 8, updatable: false, text: true },
@@ -938,7 +937,7 @@ rayHelper.show(scene);  */
   flatExit.scaling.x = 2.5;
   flatExit.scaling.y = 0.1;
 
-  // Warehouse/varasto collision objektien ympärille
+  // Warehouse/warehouse Collision around objects
   var warehouseBox1 = BABYLON.MeshBuilder.CreateBox(
     "w_box1",
     { height: 10, width: 18, depth: 7, updatable: false, text: true },
@@ -998,7 +997,7 @@ rayHelper.show(scene);  */
   warehouseBox10.scaling.z = 2.7;
   warehouseBox10.scaling.y = 0.1;
 
-  // Bunker/bunkkeri collision objektien ympärille
+  // Bunker/bunker Collision around objects
   var bunkerBox1 = BABYLON.MeshBuilder.CreateBox(
     "b_box1",
     { height: 2, width: 26, depth: 10, updatable: false, text: true },
@@ -1065,7 +1064,7 @@ rayHelper.show(scene);  */
   bunkerBox9.scaling.y = 3;
   bunkerBox9.rotation.y = 1.4;
 
-  //pöly ikkunasta - flat
+  //dust from the window - flat
   var dustPlane = BABYLON.MeshBuilder.CreatePlane(
     "taso1",
     { size: 30, updatable: true, text: false },
@@ -1078,7 +1077,7 @@ rayHelper.show(scene);  */
   dustPlane.useRadianceOverAlpha = false;
   dustPlane.useSpecularOverAlpha = false;
 
-  //pöly katosta - warehouse
+  //dust from the ceiling - Warehouse
   var dustPlane2 = BABYLON.MeshBuilder.CreatePlane(
     "taso2",
     { size: 50, updatable: true, text: false },
@@ -1091,7 +1090,7 @@ rayHelper.show(scene);  */
   dustPlane2.useRadianceOverAlpha = false;
   dustPlane2.useSpecularOverAlpha = false;
 
-  //pöly katosta - bunker
+  //dust from the ceiling - bunker
   var dustPlane3 = BABYLON.MeshBuilder.CreatePlane(
     "taso3",
     { size: 10, updatable: true, text: false },
@@ -1105,12 +1104,12 @@ rayHelper.show(scene);  */
   dustPlane3.useSpecularOverAlpha = false;
   //#endregion
 
-  //#region Tehtävät/puzzles ja muut aktivoitavat objektit
+  //#region Tasks / puzzles and other objects to be activated
 
-  //#region  Flat/Huone1 aktivoitavat objektit
+  //#region  Flat / Room1 activated objects
 
-  // Tehtävät/puzzles
-  // Flat Puzzle1 - Tietokone 1, jossa Twitter-tehtävä
+  // Tasks/puzzles
+  // Flat Puzzle1 - Computer 1 with Twitter task
   var flatPuzzle1 = BABYLON.MeshBuilder.CreateBox(
     "fPuzzle1",
     { height: 4, width: 6.7, depth: 0.1, updatable: true, text: true },
@@ -1120,7 +1119,7 @@ rayHelper.show(scene);  */
   flatPuzzle1.visibility = 0;
   flatPuzzle1.rotation.y = 3.8;
 
-  // Flat Puzzle2 - Tietokone 2, jossa lopun tehtävä
+  // Flat Puzzle2 - Computer 2, with the end task
   var flatPuzzle2 = BABYLON.MeshBuilder.CreateBox(
     "fPuzzle2",
     { height: 3.5, width: 6.7, depth: 0.1, updatable: false, text: true },
@@ -1130,7 +1129,7 @@ rayHelper.show(scene);  */
   flatPuzzle2.visibility = 0;
   flatPuzzle2.rotation.y = 2.1;
 
-  // Flat Puzzle3 - Juliste, löytyy salasana jolla pääsee Tietokone 1
+  // Flat Puzzle3 - Poster with password to access Computer 1
   var flatPuzzle3 = BABYLON.MeshBuilder.CreateBox(
     "fPuzzle3",
     { height: 13, width: 9, depth: 0.5, updatable: false, text: true },
@@ -1139,7 +1138,7 @@ rayHelper.show(scene);  */
   flatPuzzle3.position = new BABYLON.Vector3(70, 17, -0.2);
   flatPuzzle3.visibility = 0;
 
-  // Flat LockConsole - lukkokonsoli, jolla aukeaa ovi huoneen 1. ja 2. välillä
+  // Flat LockConsole - a lock console that opens the door between rooms 1 and 2
   var flatLockConsole = BABYLON.MeshBuilder.CreateBox(
     "fLockConsole",
     { height: 3.5, width: 2.5, depth: 0.1, updatable: false, text: true },
@@ -1148,8 +1147,8 @@ rayHelper.show(scene);  */
   flatLockConsole.position = new BABYLON.Vector3(54, 5.5, -92);
   flatLockConsole.visibility = 0;
 
-  // Muut huoneen 1. tärkeät objektit
-  // Flat - puuoven aktivaattori
+  // Other rooms 1. Important objects
+  // Flat - wooden door activator
   var flatDoorKnob = BABYLON.MeshBuilder.CreateBox(
     "fDoorKnob",
     { height: 20, width: 10, depth: 0.3, updatable: false, text: true },
@@ -1158,7 +1157,7 @@ rayHelper.show(scene);  */
   flatDoorKnob.position = new BABYLON.Vector3(63.5, 10, -50);
   flatDoorKnob.visibility = 0;
 
-  // Flat - safari-juliste, 2D kuva, joka antaa vinkki lopun tehtävään
+  // Flat - a safari poster, a 2D image that gives a hint at the end of the task
   var flatPosterSafari = BABYLON.MeshBuilder.CreateBox(
     "fPostSafari",
     { height: 12, width: 8.5, depth: 1, updatable: false, text: true },
@@ -1167,9 +1166,9 @@ rayHelper.show(scene);  */
   flatPosterSafari.position = new BABYLON.Vector3(41.7, 15.2, -49.7);
   flatPosterSafari.visibility = 0;
 
-  // Huoneen 1. extra objektit
+  // Rooms 1. extra objects
 
-  // Flat - televisio 2D lähikuva
+  // Flat - television 2D close up
   var flatExtra1 = BABYLON.MeshBuilder.CreateBox(
     "fExtra1",
     { height: 7.25, width: 13, depth: 0.5, updatable: false, text: true },
@@ -1179,7 +1178,7 @@ rayHelper.show(scene);  */
   flatExtra1.visibility = 0;
   flatExtra1.rotation.y = -0.315;
 
-  // Flat - keskikokoinen juliste 2D lähikuva
+  // Flat - medium size poster 2D close up
   var flatExtra2 = BABYLON.MeshBuilder.CreateBox(
     "fExtra2",
     { height: 4.2, width: 3, depth: 0.3, updatable: false, text: true },
@@ -1188,7 +1187,7 @@ rayHelper.show(scene);  */
   flatExtra2.position = new BABYLON.Vector3(72.5, 5.2, -0.3);
   flatExtra2.visibility = 0;
 
-  // Flat - kamera
+  // Flat - camera
   var flatExtra3 = BABYLON.MeshBuilder.CreateBox(
     "fExtra3",
     { height: 2.5, width: 2, depth: 2.7, updatable: false, text: true },
@@ -1197,7 +1196,7 @@ rayHelper.show(scene);  */
   flatExtra3.position = new BABYLON.Vector3(8, 11.5, -0.5);
   flatExtra3.visibility = 0;
 
-  // Flat - valotikut nurkassa
+  // Flat - light sticks in the corner
   var flatExtra4 = BABYLON.MeshBuilder.CreateBox(
     "fExtra4",
     { height: 12, width: 8, depth: 8, updatable: false, text: true },
@@ -1206,7 +1205,7 @@ rayHelper.show(scene);  */
   flatExtra4.position = new BABYLON.Vector3(5, 5, -45);
   flatExtra4.visibility = 0;
 
-  // Flat - kirjat tietokonepöydällä
+  // Flat - books on a computer desk
   var flatExtra5 = BABYLON.MeshBuilder.CreateBox(
     "fExtra5",
     { height: 3, width: 3, depth: 3, updatable: false, text: true },
@@ -1215,7 +1214,7 @@ rayHelper.show(scene);  */
   flatExtra5.position = new BABYLON.Vector3(31, 10, -48);
   flatExtra5.visibility = 0;
 
-  // Flat - kirjat lattialla tuolin vieressä
+  // Flat -books on the floor next to a chair
   var flatExtra6 = BABYLON.MeshBuilder.CreateBox(
     "fExtra6",
     { height: 2, width: 5.5, depth: 3, updatable: false, text: true },
@@ -1225,7 +1224,7 @@ rayHelper.show(scene);  */
   flatExtra6.visibility = 0;
   flatExtra6.rotation.y = 0.75;
 
-  // Flat - kirjat lattialla patjan vieressä
+  // Flat - books on the floor next to the mattress
   var flatExtra7 = BABYLON.MeshBuilder.CreateBox(
     "fExtra7",
     { height: 0.7, width: 2.5, depth: 2, updatable: false, text: true },
@@ -1234,7 +1233,7 @@ rayHelper.show(scene);  */
   flatExtra7.position = new BABYLON.Vector3(64.2, 1, -1.5);
   flatExtra7.visibility = 0;
 
-  // Flat - pieni juliste 2D kuva
+  // Flat - small poster 2D illustration
   var flatExtra8 = BABYLON.MeshBuilder.CreateBox(
     "fExtra8",
     { height: 3, width: 2, depth: 0.3, updatable: false, text: true },
@@ -1243,7 +1242,7 @@ rayHelper.show(scene);  */
   flatExtra8.position = new BABYLON.Vector3(76.3, 8.8, -0.3);
   flatExtra8.visibility = 0;
 
-  // Flat - tölkki
+  // Flat - can
   var flatExtra9 = BABYLON.MeshBuilder.CreateBox(
     "fExtra9",
     { height: 2.5, width: 0.75, depth: 0.75, updatable: false, text: true },
@@ -1252,7 +1251,7 @@ rayHelper.show(scene);  */
   flatExtra9.position = new BABYLON.Vector3(21, 9.6, -42);
   flatExtra9.visibility = 0;
 
-  // Flat - pallo
+  // Flat - ball
   var flatExtra10 = BABYLON.MeshBuilder.CreateBox(
     "fExtra10",
     { height: 2.6, width: 2.6, depth: 2.6, updatable: false, text: true },
@@ -1261,7 +1260,7 @@ rayHelper.show(scene);  */
   flatExtra10.position = new BABYLON.Vector3(47.85, 1.3, -47.9);
   flatExtra10.visibility = 0;
 
-  // Flat - lapio
+  // Flat - shovel
   var flatExtra11 = BABYLON.MeshBuilder.CreateBox(
     "fExtra11",
     { height: 16, width: 2.6, depth: 2.6, updatable: false, text: true },
@@ -1271,7 +1270,7 @@ rayHelper.show(scene);  */
   flatExtra11.visibility = 0;
   flatExtra11.rotation.x = -0.25;
 
-  // Flat - puhelin
+  // Flat - phone
   var flatExtra12 = BABYLON.MeshBuilder.CreateBox(
     "flatPuhelin",
     { height: 2, width: 2.5, depth: 2.5, updatable: false, text: true },
@@ -1282,10 +1281,10 @@ rayHelper.show(scene);  */
 
   //#endregion
 
-  //#region Warehouse/Huone2 aktivoitavat objektit
+  //#region Warehouse/Room2 activated objects
 
-  // Tehtävät/puzzles
-  // Warehouse Puzzle1 - tietokone, lopun tehtävään
+  // Tasks/puzzles
+  // Warehouse Puzzle1 - computer, the end of the task
   var warehousePuzzle1 = BABYLON.MeshBuilder.CreateBox(
     "whPuzzle1",
     { height: 4, width: 6, depth: 0.1, updatable: false, text: true },
@@ -1295,7 +1294,7 @@ rayHelper.show(scene);  */
   warehousePuzzle1.visibility = 0;
   warehousePuzzle1.rotation.y = 0.9;
 
-  // Warehouse Puzzle2 - lehti, jossa aktivoituu 2D kuva
+  // Warehouse Puzzle2 - a magazine that activates a 2D image
   var warehousePuzzle2 = BABYLON.MeshBuilder.CreateBox(
     "whPuzzle2",
     { height: 1, width: 2.7, depth: 2.3, updatable: false, text: true },
