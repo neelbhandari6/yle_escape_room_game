@@ -66,7 +66,7 @@ var createScene = function (engine, canvas) {
         scene.cleanCachedTextureBuffer();
      //   var hl1 = new BABYLON.HighlightLayer("hl1", scene);
      //   var hl2 = new BABYLON.HighlightLayer("hl2", scene);
-        //Painovoima
+        
   
   scene.gravity = new BABYLON.Vector3(0, -0.9, 0);
   // Container
@@ -94,8 +94,8 @@ var createScene = function (engine, canvas) {
     // etc.
   };
   var lensEffect = new BABYLON.LensRenderingPipeline('lensEffects', parameters, scene, 1.0, camera); */
-  //pelaajan kameran (hahmon) painovoima ja collision
-  // katselunopeus, liikkumisnopeus
+  //player camera (character) gravity and Collision
+  // viewing speed, movement speed
   camera.fov = 0.9;
   camera.angularSensibility = 3500;
   camera.speed = 0.75;
@@ -114,10 +114,10 @@ var createScene = function (engine, canvas) {
     castRay();
   };
 
-  // mobiilipuoli ei toimi kunnolla, virtualJoystick, optimointi, tehtäväikkunat pitää korjata
-  // Virtual joystick --- ei toimi täydellisesti - pitää korjata
+  // if playing on mobile or if screen is minimised
+ 
   if (window.outerWidth < 800) {
-    // It's mobile
+    
     let adt = BABYLON.GUI.AdvancedDynamicTexture.CreateFullscreenUI("UI");
     let xAddPos = 0;
     let yAddPos = 0;
@@ -319,19 +319,12 @@ var createScene = function (engine, canvas) {
       return rect;
     }
   }
-  /* const resizeCallback = (scene, canvas) => {
-  addJoystick(scene, canvas);
-};
+  
 
-const addJoystickOnWindowResize = (scene, canvas) => {
-  addJoystick(scene, canvas);
-  window.addEventListener("resize", () => resizeCallback(scene, canvas));
-};
 
-export default addJoystickOnWindowResize; */
-  //#endregion
 
-  //#region Valot
+
+  //#region Lights
   var light = new BABYLON.HemisphericLight(
     "light1",
     new BABYLON.Vector3(0, -1, 0),
@@ -344,7 +337,7 @@ export default addJoystickOnWindowResize; */
 
   //#endregion
 
-  //#region Optimointi
+  //#region Optimizing
   /*
 // Optimatization testing start
     engine.enableOfflineSupport = false;
@@ -430,7 +423,7 @@ export default addJoystickOnWindowResize; */
 
   // Blocker for dirty mechanism
   scene.blockMaterialDirtyMechanism = true;
-  // lisä-juttuja optimointiin
+  // additional stuff for optimization
   BABYLON.OBJFileLoader.OPTIMIZE_WITH_UV = true;
   BABYLON.OBJFileLoader.MATERIAL_LOADING_FAILS_SILENTLY = false;
   //#endregion'
@@ -459,12 +452,12 @@ export default addJoystickOnWindowResize; */
   //#endregion
 
   var crosshair = BABYLON.Mesh.CreateDisc("crosshair", 0.01, 12, scene);
-  // crosshair tulee kaiken muun päälle
+  // the crosshair comes on top of everything else
   crosshair.renderingGroupId = 1;
-  // billboardin avulla käännettynä aina ruutuun päin
+  // With the help of Billboard, always flipped towards the box
   crosshair.billboardMode = BABYLON.Mesh.BILLBOARDMODE_ALL;
   crosshair.visibility = 1;
-  // crosshair saa kameran position
+  //crosshair gets the camera position
   crosshair.position = camera.getTarget();
   console.log(crosshair.position);
 
@@ -480,9 +473,9 @@ export default addJoystickOnWindowResize; */
 
     const warehouseDoor = scene.getMeshByName("hinge2")
     const bunkerDoor = scene.getMeshByName("hinge3")
-    //kameran(pelaajan näkövinkkelistä tuleva ray) 10-20 on hyvä matka noin käden mitta
+    //the camera (ray coming from the player's line of sight) 10-20 is a good distance around the hand measure
     var ray = camera.getForwardRay(20);
-    /* // tämä laittaa rayn näkymään
+    /* // this puts ray in view
 let rayHelper = new BABYLON.RayHelper(ray); 
 rayHelper.show(scene);  */
     const meshesWithActivators = [
@@ -513,7 +506,7 @@ rayHelper.show(scene);  */
       {
         mesh: flatPuzzle3,
         callback: () => {
-          // MATRIX-JULISTE
+          // MATRIX-POSTER
           window.setTimeout(tips.wayOut.clear, 2000);
           objectBoxState.changeMesh("Huone1_Juliste_matrix", "flat");
           objectBoxState.changeVisibility(true);
@@ -1311,14 +1304,8 @@ rayHelper.show(scene);  */
   warehousePuzzle2.position = new BABYLON.Vector3(74.5, 0.7, -135.5);
   warehousePuzzle2.visibility = 0;
   warehousePuzzle2.rotation.y = -0.3;
-  /* //näitä objekteja ei ole vielä
-// Warehouse Puzzle3 - kamera, josta kuvia mitä selata
-var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, width: 2.7, depth: 2.3, updatable: false, text: true },scene);
-    warehousePuzzle3.position = new BABYLON.Vector3(74.5, 0.7, -135.5);
-    warehousePuzzle3.visibility = 1;
-    warehousePuzzle3.rotation.y = -0.3;
-*/
-  // Warehouse Puzzle4 - kellolukko, johon pitää aktivoida oikea aika
+  
+  // Warehouse Puzzle4 - a clock lock to which the correct time must be activated
   var warehousePuzzle4 = BABYLON.MeshBuilder.CreateBox(
     "whPuzzle4",
     { height: 8, width: 1.8, depth: 5.35, updatable: false, text: true },
@@ -1327,9 +1314,9 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   warehousePuzzle4.position = new BABYLON.Vector3(122, 5.3, -196);
   warehousePuzzle4.visibility = 0;
 
-  // Huoneen 2. extra objektit
+  // Room 2. extra objects
 
-  // Warehouse - jakoavain
+  // Warehouse - wrench
   var warehouseExtra1 = BABYLON.MeshBuilder.CreateBox(
     "whExtra1",
     { height: 0.2, width: 0.6, depth: 2.6, updatable: false, text: true },
@@ -1339,7 +1326,7 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   warehouseExtra1.visibility = 0;
   warehouseExtra1.rotation.y = -1.1;
 
-  // Warehouse - kuvat seinällä 2D lähikuva
+  // Warehouse - pictures on the wall 2D close up
   var warehouseExtra2 = BABYLON.MeshBuilder.CreateBox(
     "whExtra2",
     { height: 6, width: 0.1, depth: 9, updatable: false, text: true },
@@ -1348,7 +1335,7 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   warehouseExtra2.position = new BABYLON.Vector3(79.8, 7.2, -134.5);
   warehouseExtra2.visibility = 0;
 
-  // Warehouse - kanisteri002
+  // Warehouse - can002
   var warehouseExtra3 = BABYLON.MeshBuilder.CreateBox(
     "whExtra3",
     { height: 4.5, width: 4.5, depth: 4.5, updatable: false, text: true },
@@ -1357,7 +1344,7 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   warehouseExtra3.position = new BABYLON.Vector3(34.39, 20.3, -154.4);
   warehouseExtra3.visibility = 0;
 
-  // Warehouse - kanisteri keltainen
+  // Warehouse - yellow can 
   var warehouseExtra4 = BABYLON.MeshBuilder.CreateBox(
     "whExtra4",
     { height: 5.5, width: 5, depth: 6.5, updatable: false, text: true },
@@ -1366,7 +1353,7 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   warehouseExtra4.position = new BABYLON.Vector3(60, 7.5, -221.54);
   warehouseExtra4.visibility = 0;
 
-  // Warehouse - kanisteri v
+  // Warehouse - v can
   var warehouseExtra5 = BABYLON.MeshBuilder.CreateBox(
     "whExtra5",
     { height: 9, width: 6, depth: 2.5, updatable: false, text: true },
@@ -1376,7 +1363,7 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   warehouseExtra5.rotation.y = 0.33;
   warehouseExtra5.visibility = 0;
 
-  // Warehouse - kanisterit 02
+  // Warehouse - can 02
   var warehouseExtra6 = BABYLON.MeshBuilder.CreateBox(
     "whExtra6",
     { height: 7, width: 6, depth: 8.5, updatable: false, text: true },
@@ -1395,7 +1382,7 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   warehouseExtra7.visibility = 0;
   warehouseExtra7.rotation.y = -1.1;
 
-  // Warehouse - ruuvimeisselit
+  // Warehouse - screwdrivers
   var warehouseExtra8 = BABYLON.MeshBuilder.CreateBox(
     "whExtra8",
     { height: 0.4, width: 2.3, depth: 2.7, updatable: false, text: true },
@@ -1404,7 +1391,7 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   warehouseExtra8.position = new BABYLON.Vector3(72.2, 0.45, -143.65);
   warehouseExtra8.visibility = 0;
 
-  // Warehouse - sakset
+  // Warehouse - scissors
   var warehouseExtra9 = BABYLON.MeshBuilder.CreateBox(
     "whExtra9",
     { height: 0.2, width: 2.5, depth: 2, updatable: false, text: true },
@@ -1413,7 +1400,7 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   warehouseExtra9.position = new BABYLON.Vector3(34, -1.19, -130.77);
   warehouseExtra9.visibility = 0;
 
-  // Warehouse - spraymaalit pöydällä
+  // Warehouse - spray paint on the table
   var warehouseExtra10 = BABYLON.MeshBuilder.CreateBox(
     "whExtra10",
     { height: 2.6, width: 2.5, depth: 2.5, updatable: false, text: true },
@@ -1422,7 +1409,7 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   warehouseExtra10.position = new BABYLON.Vector3(78.12, 1.75, -131.43);
   warehouseExtra10.visibility = 0;
 
-  // Warehouse - spraymaalit
+  // Warehouse - spray paint
   var warehouseExtra11 = BABYLON.MeshBuilder.CreateBox(
     "whExtra11",
     { height: 3, width: 3.5, depth: 3.5, updatable: false, text: true },
@@ -1431,7 +1418,7 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   warehouseExtra11.position = new BABYLON.Vector3(33.3, 6.64, -153.06);
   warehouseExtra11.visibility = 0;
 
-  // Warehouse - spraymaalit 007
+  // Warehouse - spray paint 007
   var warehouseExtra12 = BABYLON.MeshBuilder.CreateBox(
     "whExtra12",
     { height: 4, width: 1, depth: 1, updatable: false, text: true },
@@ -1440,7 +1427,7 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   warehouseExtra12.position = new BABYLON.Vector3(32.53, 13.54, -157.01);
   warehouseExtra12.visibility = 0;
 
-  // Warehouse - teippirulla
+  // Warehouse - tape roll
   var warehouseExtra13 = BABYLON.MeshBuilder.CreateBox(
     "whExtra13",
     { height: 1, width: 2.1, depth: 2.1, updatable: false, text: true },
@@ -1449,7 +1436,7 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   warehouseExtra13.position = new BABYLON.Vector3(33.89, -0.86, -127.8);
   warehouseExtra13.visibility = 0;
 
-  // Warehouse - vasara
+  // Warehouse - summer
   var warehouseExtra14 = BABYLON.MeshBuilder.CreateBox(
     "whExtra14",
     { height: 1, width: 2.3, depth: 2.1, updatable: false, text: true },
@@ -1458,7 +1445,7 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   warehouseExtra14.position = new BABYLON.Vector3(35.23, 11.86, -150);
   warehouseExtra14.visibility = 0;
 
-  // Warehouse - vessapaperi
+  // Warehouse - toilet paper
   var warehouseExtra15 = BABYLON.MeshBuilder.CreateBox(
     "whExtra15",
     { height: 5.5, width: 5, depth: 5, updatable: false, text: true },
@@ -1467,7 +1454,7 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   warehouseExtra15.position = new BABYLON.Vector3(33.83, 0.46, -157.99);
   warehouseExtra15.visibility = 0;
 
-  // Warehouse - puhelin
+  // Warehouse - phone
   var warehouseExtra16 = BABYLON.MeshBuilder.CreateBox(
     "whExtra16",
     { height: 2.3, width: 3, depth: 3, updatable: false, text: true },
@@ -1477,10 +1464,10 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   warehouseExtra16.visibility = 0;
   //#endregion
 
-  //#region Bunker/Huone3 aktivoitavat objektit
+  //#region Bunker/Room3 objects to be activated
 
-  // Tehtävät/puzzles
-  // Bunker Puzzle1 - sähkötaulu, tietokoneet Bunkerissa, varastossa, huoneistossa käynnistyvät ja niissä on osa lopun tehtävistä
+  // Tasks/puzzles
+  // Bunker Puzzle1 - the electrical panel, the computers in the bunker, the warehouse, the apartment start up and have some of the rest of the tasks
   var bunkerPuzzle1 = BABYLON.MeshBuilder.CreateBox(
     "bPuzzle1",
     { height: 6.5, width: 4.5, depth: 5, updatable: false, text: true },
@@ -1489,7 +1476,7 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   bunkerPuzzle1.position = new BABYLON.Vector3(124, -11.8, -135);
   bunkerPuzzle1.visibility = 0;
 
-  // Bunker Puzzle2 - tietokone, lopun tehtävään
+  // Bunker Puzzle2 - computer, the end of the task
   var bunkerPuzzle2 = BABYLON.MeshBuilder.CreateBox(
     "bPuzzle2",
     { height: 4, width: 7, depth: 0.3, updatable: false, text: true },
@@ -1499,9 +1486,9 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   bunkerPuzzle2.visibility = 0;
   bunkerPuzzle2.rotation.y = 0.84;
 
-  // Huoneen 3. extra objektit
+  // Room 3. extra facilities
 
-  // Bunker - laatikko
+  // Bunker - box
   var bunkerExtra1 = BABYLON.MeshBuilder.CreateBox(
     "bExtra1",
     { height: 7, width: 11, depth: 18, updatable: false, text: true },
@@ -1511,7 +1498,7 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   bunkerExtra1.visibility = 0;
   bunkerExtra1.rotation.y = -0.28;
 
-  // Bunker - kirja yksin
+  // Bunker - single book
   var bunkerExtra2 = BABYLON.MeshBuilder.CreateBox(
     "bExtra2",
     { height: 0.5, width: 2.3, depth: 3.2, updatable: false, text: true },
@@ -1521,7 +1508,7 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   bunkerExtra2.visibility = 0;
   bunkerExtra2.rotation.y = 0.5;
 
-  // Bunker - kirjat
+  // Bunker - Books
   var bunkerExtra3 = BABYLON.MeshBuilder.CreateBox(
     "bExtra3",
     { height: 3.2, width: 3.2, depth: 3.2, updatable: false, text: true },
@@ -1531,7 +1518,7 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   bunkerExtra3.visibility = 0;
   bunkerExtra3.rotation.y = 0.5
 
-    // Bunker - puhelin
+    // Bunker - phone
     var bunkerExtra4 = BABYLON.MeshBuilder.CreateBox(
       "bExtra4",
       { height: 2, width: 2.5, depth: 3, updatable: false, text: true },
@@ -1545,7 +1532,7 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   //#endregion
 
   const particleSystemStuff = () => {
-    //#region //Particle-pöly ikkunasta
+    //#region //Particle-dust from the window
 
     var particleSystem = new BABYLON.GPUParticleSystem("particles", 500, scene);
     particleSystem.particleTexture = new BABYLON.Texture(
@@ -1589,16 +1576,16 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
     particleSystem.minAngularSpeed = 0;
     particleSystem.maxAngularSpeed = Math.PI;
 
-    // Nopeus
+    // Speed
     particleSystem.minEmitPower = 0.1;
     particleSystem.maxEmitPower = 0.5;
     particleSystem.updateSpeed = 0.002;
 
-    // Particle systemin käynnistys
+    // Particle system startup
     particleSystem.start();
     //#endregion
 
-    //#region //Particle-pöly warehousen katosta
+    //#region //Particle-dust from the roof of Warehouse
     var particleSystem2 = new BABYLON.GPUParticleSystem(
       "particles",
       600,
@@ -1645,16 +1632,16 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
     particleSystem2.minAngularSpeed = 0;
     particleSystem2.maxAngularSpeed = 0.15; //Math.PI
 
-    // Nopeus
+    // Speed
     particleSystem2.minEmitPower = 0.05;
     particleSystem2.maxEmitPower = 0.08;
     particleSystem2.updateSpeed = 0.002;
 
-    // Particle systemin käynnistys
+    // Particle system startup
     particleSystem2.start();
     //#endregion
 
-    //#region //Particle-pöly bunkerin katossa
+    //#region //Particle-dust on the roof of the bunker
     var particleSystem3 = new BABYLON.GPUParticleSystem(
       "particles",
       200,
@@ -1701,12 +1688,12 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
     particleSystem3.minAngularSpeed = 0;
     particleSystem3.maxAngularSpeed = Math.PI;
 
-    // Nopeus
+    // Speed 
     particleSystem3.minEmitPower = 0.1;
     particleSystem3.maxEmitPower = 0.5;
     particleSystem3.updateSpeed = 0.002;
 
-    // Particle systemin käynnistys
+    // Particle system startup
     particleSystem3.start();
     //#endregion
   };
@@ -1714,14 +1701,14 @@ var warehousePuzzle3 = BABYLON.MeshBuilder.CreateBox("whPuzzle3",{height: 1, wid
   //particleSystemStuff();
   //#endregion
 
-  //#region Musiikki ja äänet
-  // Voimakkuus ! voimakkuuden säätö pitää vielä tehdä
+  //#region Music and sounds
+  
   var volumeSoundtrack = 0.2;
   var volumeSounds = 0.5;
   var volumeSounds1 = 1;
   var volumeSounds2 = 1;
 
-  // musiikki
+  // Music
 
   var musicFlat = new BABYLON.Sound(
     "musicFl",
@@ -1751,7 +1738,7 @@ var musicExit = new BABYLON.Sound(
   { loop: true, volume: volumeSoundtrack, autoplay: false }
 );
 
-  //äänet
+  //vote
   var sphereMat = new BABYLON.StandardMaterial("sphereMat", scene);
   sphereMat.diffuseColor = BABYLON.Color3.Purple();
   sphereMat.backFaceCulling = false;
@@ -1898,7 +1885,7 @@ var musicExit = new BABYLON.Sound(
     computerSound4.play(1);
   }
 
-// askeläänet ! eivät toimi mobiilissa tällä koodilla
+// footsteps
 const footSound = setInterval(footSteps, 500);
 var footSteps = new BABYLON.Sound("footSteps", "sound/ES_Combat Boots Walk 2 - SFX Producer.mp3", scene, null, {loop: false});
 document.addEventListener("keydown", function(evt) {
@@ -1923,7 +1910,7 @@ document.addEventListener("keyup", function(evt) {
 
   //#endregion
 
-  //#region // pelin lataus ja käynnistys
+  //#region // game download and launch
   const cameraHelpers = {
     camera: camera,
     attachControl: () => camera.attachControl(canvas, true),
