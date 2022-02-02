@@ -35,7 +35,7 @@ import {
 import { userChoiceTracker } from "./helpers/userChoiceTracker";
 import { tips, TipWindow} from "~src/tips/index.js";
 import { shortcuts, shortcutDetected} from "./helpers/shortcuts";
-//siirretty tähän ulkopuolelle jotta muutkin moduulit voi käyttää
+//moved outside so that other modules can be used
 export const frameRate = 30;
 
 
