@@ -6,9 +6,9 @@ let alreadyLoaded = {
 }
 
 const sweepAnimation = (clockwise) => {
-  // suunta määrrittyy clockwise-parametrissä
-  // bunkerilla oma animaatio, muut käyttää tätä
-  // Nopeutin keyframeja jakamalla ne kolmella, voidaan säätää joskus
+  // the direction is specified in the clockwise parameter
+  // The bunker has its own animation, others use this
+  // Accelerating keyframes by dividing them by three can be adjusted sometimes
   const sweep = new BABYLON.Animation(
     "sweep",
     "rotation.y",
@@ -44,7 +44,7 @@ const sweepAnimation = (clockwise) => {
 };
 
 const bunkerDoor = async (scene) => {
-  //warehouse-bunker metalliovi
+  //Warehouse-bunker with metal door
   var doorBunkerHinge = BABYLON.MeshBuilder.CreateBox("hinge3", {height: 6, width: 2, depth: 15, updatable: false, text: true }, scene)
   doorBunkerHinge.visibility = 0;
   doorBunkerHinge.position = new BABYLON.Vector3(123.5, 3, -197);
@@ -152,7 +152,7 @@ return await animation(result.meshes[1]);
 
 
 const corridorWarehouse = async (scene) => {
-  //corridor-warehouse metalliovi
+  //corridor-Warehouse metal door
 
   var doorMetalHinge = BABYLON.MeshBuilder.CreateBox(
     "hinge2",

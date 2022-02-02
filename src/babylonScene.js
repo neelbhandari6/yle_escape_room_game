@@ -64,8 +64,7 @@ var createScene = function (engine, canvas) {
   engine.doNotHandleContextLost = true;
   scene.clearCachedVertexData();
         scene.cleanCachedTextureBuffer();
-     //   var hl1 = new BABYLON.HighlightLayer("hl1", scene);
-     //   var hl2 = new BABYLON.HighlightLayer("hl2", scene);
+     
         
   
   scene.gravity = new BABYLON.Vector3(0, -0.9, 0);
@@ -997,7 +996,7 @@ rayHelper.show(scene);  */
   warehouseBox10.scaling.z = 2.7;
   warehouseBox10.scaling.y = 0.1;
 
-  // Bunker/bunker Collision around objects
+  // Bunker/bunkers Collision around objects
   var bunkerBox1 = BABYLON.MeshBuilder.CreateBox(
     "b_box1",
     { height: 2, width: 26, depth: 10, updatable: false, text: true },
