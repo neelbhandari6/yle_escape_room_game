@@ -1,14 +1,14 @@
 import CreateWindow from "../puzzleWindow";
 import "./index.css";
 import { html, render } from "lit-html";
-import kirjainkiekko from "./kirjainkiekko.jpg";
-import consoleOpen from "./huone1_Lukkokonsoli_Auki.jpg";
-import consoleClosed from "./huone1_Lukkokonsoli_Kiinni.jpg";
+import alphabet_strip from "./alphabet_strip.jpg";
+import consoleOpen from "./room1_lockconsole_open.jpg";
+import consoleClosed from "./room1_lockconsole_closed.jpg";
 import imagesLoaded from "imagesloaded";
 import {tips} from "~src/tips/index.js"
-let inputWord = "vgidou".split(""); // melonj , vgidou
+let inputWord = "vgidou".split(""); 
 
-let characters = "abcdefghijklmnopqrstuvwxyz".split("");
+let characters = "abcdefghijklmnopqrstuvwxyzåäö".split("");
 let clearFunction = () => null;
 let puzzleSolved = false;
 let doorOpened;
@@ -107,7 +107,7 @@ const singleDisc = (index) => {
     html: () => html`<div id="slider-${index}" class="letter-slider">
       <div class="visible-part">
         <img
-          src=${kirjainkiekko}
+          src=${alphabet_strip}
           style="bottom: ${percent}%; transition: ${transition}; "
         />
       </div>

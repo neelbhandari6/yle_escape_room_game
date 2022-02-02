@@ -9,12 +9,12 @@ export const wallSwitchState = { active: false, pressed: false };
 const FlatPuzzle = function (openExit, sounds) {
   const whichImage = () => {
     const { active, pressed } = wallSwitchState;
-    if (active && pressed) return images.auki;
-    else if (active && !pressed) return images.kiinni;
-    else if (!active && !pressed) return images.valoton;
+    if (active && pressed) return images.open;
+    else if (active && !pressed) return images.closed;
+    else if (!active && !pressed) return images.without_light;
     else {
       console.log("Error: cannot read wall switch state");
-      return images.valoton;
+      return images.without_light;
     }
   };
   let timeout;

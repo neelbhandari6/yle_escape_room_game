@@ -1,8 +1,8 @@
 
 import { html, render } from "lit-html";
 import {tipData} from "./index.js"
-import "./fontello/css/fontello.css";
-import "./fontello/css/animation.css";
+import "./fonts/css/fonts.css";
+import "./fonts/css/animation.css";
 import "./tipBox.css";
 import "animate.css";
 // NOTE: This probably is not used anymore as of May 2020

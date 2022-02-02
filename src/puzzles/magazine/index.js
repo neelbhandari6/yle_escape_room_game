@@ -1,5 +1,5 @@
 import CreateWindow from "../puzzleWindow";
-import magazine2D from "./lehti.jpg"
+import magazine2D from "./magazine.jpg"
 import { html, render } from "lit-html";
 import "./index.css"
 import {tips} from "~/src/tips"

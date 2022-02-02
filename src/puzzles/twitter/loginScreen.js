@@ -2,7 +2,7 @@ import { html, render } from "lit-html";
 import "./loginScreen.css";
 import smallBg from "./smallbg.jpg";
 import bigBg from "./bg.jpg";
-import "./icon/css/fontello.css";
+import "./icon/css/fonts.css";
 import {tips} from "~src/tips/index.js"
 
 export const answers = {

@@ -1,9 +1,9 @@
 import CreateWindow from "../puzzleWindow";
 import "./index.css";
 import { html, render } from "lit-html";
-import Pohja from "./pohja.jpg";
-import TuntiViisari from "./tuntiviisari.png";
-import MinuuttiViisari from "./minuuttiviisari.png";
+import Base from "./base.jpg";
+import HourHand from "./hour_hand.png";
+import MinuteHand from "./minute_hand.png";
 import throttle from "~src/helpers/throttle.js"
 import {userChoiceTracker} from "~src/helpers/userChoiceTracker"
 
@@ -44,19 +44,19 @@ const FlatPuzzle = function (doorTrigger) {
         class="clock-container"
         style="width: ${width}px; height: ${height}px"
       >
-        <img class="clock select-disable" draggable="false" src=${Pohja} @load=${() => {BgLoaded = true; FlatPuzzle(); }} />
+        <img class="clock select-disable" draggable="false" src=${Base} @load=${() => {BgLoaded = true; FlatPuzzle(); }} />
         
         <img
           class="hour select-disable"
           draggable="false"
           id="clock-hour"
-          src=${TuntiViisari}
+          src=${HourHand}
         />
         <img
           class="minute select-disable"
           draggable="false"
           id="clock-minute"
-          src=${MinuuttiViisari}
+          src=${MinuteHand}
         />
       </div>
     </div>

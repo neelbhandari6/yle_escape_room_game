@@ -9,7 +9,7 @@ import { html, render } from "lit-html";
 import imagesLoaded from "imagesloaded";
 import {userChoiceTracker} from "~src/helpers/userChoiceTracker"
 import {tips} from "~/src/tips"
-// Punainen 2, sininen 5, valkoinen 3
+// Red 2, Blue 5, White 3
 
 let puzzleSolved = false;
 
@@ -74,9 +74,9 @@ const wirePicker = ({ wires, active, selected, color }) => {
   
   
   let file;
-  // johto ei ole aktiivinen:
-  // 1. Jos kytketty, laita vanhaan paikkaan
-  // 2. Jos ei ole kytketty, älä laita mihinkään
+  // cable is not active:
+  // 1. If connected, put in the old place
+  // 2. If not connected, do not put anywhere
 
   if (!active) {
     if (currentConnections[color]) {
@@ -87,9 +87,9 @@ const wirePicker = ({ wires, active, selected, color }) => {
     }
   }
 
-  // johto on aktiivine
-  // 1. jos socket varattu, älä tee mitään
-  // 2. Jos socket ei ole varattu, kytke siihen,ja tee uusi varaus
+  // the cord is active
+  // 1. if the socket is busy, do nothing
+  // 2. If the socket is not booked, plug it in and make a new one
 
   if (active) {
     if (isReserved()) {
@@ -111,9 +111,9 @@ const wirePicker = ({ wires, active, selected, color }) => {
 };
 
 let wireFileNames = {
-  red: ["Puna", "Puna_1", "Puna_2", "Puna_3", "Puna_4", "Puna_5"],
-  white: ["Valko", "Valko_1", "Valko_2", "Valko_3", "Valko_4", "Valko_5"],
-  blue: ["Sini", "Sini_1", "Sini_2", "Sini_3", "Sini_4", "Sini_5"],
+  red: ["red", "red_1", "red_2", "red_3", "red_4", "red_5"],
+  white: ["white", "white_1", "white_2", "white_3", "white_4", "white_5"],
+  blue: ["blue", "blue_1", "blue_2", "blue_3", "blue_4", "blue_5"],
 };
 
 let allImagesLoaded = false;

@@ -64,11 +64,11 @@ tips.lookAtPoster.setTime(50) // suluissa ajastin sekunteina, joiden kuluessa ti
 9. "Ensimmäisestä huoneesta taisi löytyä myös kuvia."
    - name: somePicturesInFirstRoom
    - setTime: Kun lehti suljetaan (magazine/index.js exitButtonCallback)
-   - clear: Kun kamera avautuu (Babylonscene.js)
+   - clear: Kun camera avautuu (Babylonscene.js)
 
 10. "Löytyykö ensimmäisestä huoneesta kellon kuvia";
    - name: clockPicturesInFirstRoom
-   - setTime: Kun kamera avataan silloin kun warehousen ovi on jo auki (camera/index.js)
+   - setTime: Kun camera avataan silloin kun warehousen ovi on jo auki (camera/index.js)
    – clear: Kun bunkkerin ovi avautuu (babylonScene.js)
 
 11. "Mihin johdot johtavat?";

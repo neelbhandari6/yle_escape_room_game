@@ -56,15 +56,15 @@ $(function () {
         $("#parentFacebookWrapper").addClass("hide");
     })
 
-    $("#kamera").on("click", function () {
-        console.log("kamera");
+    $("#camera").on("click", function () {
+        console.log("camera");
         $("#parentCameraWrapper").removeClass("hide");
         $("#parentTwitterWrapper").addClass("hide");
         $("#parentFacebookWrapper").addClass("hide");
     })
 
     $("#facebook").on("click", function () {
-        console.log("kamera");
+        console.log("camera");
         $("#parentFacebookWrapper").removeClass("hide");
         $("#parentTwitterWrapper").addClass("hide");
         $("#parentCameraWrapper").addClass("hide");
