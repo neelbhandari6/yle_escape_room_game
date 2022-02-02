@@ -8,7 +8,7 @@ import imagesLoaded from "imagesloaded";
 import {tips} from "~src/tips/index.js"
 let inputWord = "vgidou".split(""); // melonj , vgidou
 
-let characters = "abcdefghijklmnopqrstuvwxyzåäö".split("");
+let characters = "abcdefghijklmnopqrstuvwxyz".split("");
 let clearFunction = () => null;
 let puzzleSolved = false;
 let doorOpened;
