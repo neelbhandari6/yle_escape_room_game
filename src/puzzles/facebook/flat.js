@@ -5,11 +5,11 @@ import facebookTemplate from "./facebookTemplate";
 const FlatPuzzle = function (posts) {
 
   const firstPost = {
-    name: "Solvi Saikkonen",
+    name: "Nikitha Srikanth",
     time: "13:45",
     code: "PO",
-    linkPic: "https://images.cdn.yle.fi/image/upload//w_1198,h_674,f_auto,fl_lossy,q_auto:eco/39-4716745aaa858692454.jpg",
-    linkUrl: "yle.fi",
+    linkPic: "img/bird.jpg",
+    linkUrl: "facebook.com",
     profilePic: "img/avatar.png",
     fake: false,
     linkHeader: "Strange nuisance on dairy farms: Talitint pecking cows' udders",
@@ -17,11 +17,11 @@ const FlatPuzzle = function (posts) {
   } 
   
   const secondPost = {
-    name: "Solvi Saikkonen",
+    name: "Nikitha Srikanth",
     time: "11:45",
     profilePic: "img/avatar.png",
     linkPic: "img/hammerhead.jpg",
-    linkUrl: "hoaxnews.com",
+    linkUrl: "facebook.com",
     code: "SA",
     fake: true,
     linkHeader: "Hammerhead sharks in the Gulf of Finland",
@@ -29,13 +29,13 @@ const FlatPuzzle = function (posts) {
   } 
 
   const thirdPost = {
-    name: "Solvi Saikkonen",
+    name: "Nikitha Srikanth",
     time: "11:45",
     fake: false,
     code: "TE",
     profilePic: "img/avatar.png",
-    linkPic: "https://images.cdn.yle.fi/image/upload//w_1198,h_674,f_auto,fl_lossy,q_auto:eco/17-3384755fc103f4d78e.jpg",
-    linkUrl: "hs.fi",
+    linkPic: "img/teeth.jpg",
+    linkUrl: "facebook.com",
     linkHeader: 'The "annual rings" of the roots of the teeth tell us about the turning points in our lives',
     linkDesc: "Just right before the futuristic-sounding 2020, researchers at Bristol and the Technical University of Denmark announced that they had, for the first time, made a quantum leap between two computer chips without being physically or electronically connected to each other. The technology is based on a quantum phenomenon called interleaving, New Atlas says.",
   } 

@@ -9,7 +9,7 @@ import {Profiles, Tweets} from "./data"
 
 
 const FlatPuzzle = function (noLogin) {
-  //banana.jpg, @laura_banana,
+  
 
   const Tweet = ({
     callback,
@@ -132,7 +132,7 @@ const FlatPuzzle = function (noLogin) {
                   </div>
                   <div class="hakukentta">
                     <div><img src="img/twitter/svg/haku.svg" /></div>
-                    <div>#rokotteet</div>
+                    <div>#cgvr</div>
                   </div>
                 </div>
 

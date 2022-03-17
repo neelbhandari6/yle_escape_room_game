@@ -56,9 +56,9 @@ let activeWire = null;
 let reservedSockets = [];
 let currentConnections = {
   // [file, socket]
-  red: ["Puna", 0],
-  white: ["Valko", 0],
-  blue: ["Sini", 0],
+  red: ["red", 0],
+  white: ["white", 0],
+  blue: ["blue", 0],
 };
 
 const wirePicker = ({ wires, active, selected, color }) => {
@@ -163,7 +163,7 @@ ${Object.values(wireImages).map(e => html`<img src=${e} style="width: 0; height:
       </div>
     </div>
   `;
-  // CreateWindow palauttaa modaali-ikkunan noden, johon siis rendataan
+  // CreateWindow returns the node of the modal window to which it is rendered
   const {element, exit}  = CreateWindow({exitCallback: () => {if(!puzzleSolved) 
     tips.blueWhiteRed.clear();
     tips.keepAnEyeOnColors.setTime(2)}})

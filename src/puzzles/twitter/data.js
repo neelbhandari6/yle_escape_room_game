@@ -1,38 +1,38 @@
 import { html, render } from "lit-html";
 
 export const Profiles = {
-  laura_banana: {
-      realName: "Laura",
-    profilePic: "banana.jpg",
-    handle: "@laura_banana",
+  neel_down: {
+      realName: "Neel Bhandari",
+    profilePic: "neel.jpg",
+    handle: "@neel_down",
     tweetsTotal: "220",
     desc:
-      "Mother, spouse, canine, teacher and amateur gardener. Tweet in English.",
+      "Love to think. Funny CS student. ",
     followers: "332",
     following: "207",
     background: "bananatausta.jpg",
     joined: "06/2017",
     profileTweets: [0, 1, 2]
   },
-  OliverTheOrange: {
-      realName: "Olli Korhonen",
-    profilePic: "orange.jpg",
-    handle: "@OliverTheOrange",
+  NikithaEscapeRoomChamp: {
+      realName: "Nikitha Srikanth",
+    profilePic: "nikitha.jpg",
+    handle: "@NikithaEscapeRoomChamp",
     tweetsTotal: "462",
     desc:
-      "A paramedic who enjoys nature sports in many forms: hiking, orienteering and geocaching. Offspring are often also involved.",
+      "CS student. Like to code and crack jokes.",
     followers: "345",
     following: "512",
     background: "orangetausta.jpg",
     joined: "02/2011",
     profileTweets: [3, 4, 5]
 },
-  Meloni_6745792: {
-      realName: "JhG",
+ CGVR_6745792: {
+      realName: "CGVR Bot",
     profilePic: "meloni.jpg",
-    handle: "@Meloni_6745792",
+    handle: "@CGVR_6745792",
     tweetsTotal: "122",
-    desc: "I am the answer to everything",
+    desc: "The code is Meloni",
     followers: "2001",
     following: "7",
     background: "melonitausta.jpg",
@@ -43,12 +43,11 @@ export const Profiles = {
 
 export const Tweets = [
   {
-    profilePic: Profiles["laura_banana"].profilePic,
-    handle: "laura_banana",
-    tweet: html`Do you dare to take the flu vaccine for your children? If about it
-      there will be narcolepsy :( On the other hand
-      <span class="twitterHashtags"><b>#vaccines</b></span>
-      I guess I should take. A little scared.`,
+    profilePic: Profiles["neel_down"].profilePic,
+    handle: "neel_down",
+    tweet: html`This project was built for the CGVR lab part B. You have about 30 mins to escape from here.
+      <span class="twitterHashtags"><b>#escape</b></span>
+      `,
     comments: "3",
     showOnTimeline: true,
     retweets: "1",
@@ -59,8 +58,8 @@ export const Tweets = [
     },
   },
   {
-    profilePic: Profiles["laura_banana"].profilePic,
-    handle: "laura_banana",
+    profilePic: Profiles["neel_down"].profilePic,
+    handle: "neel_down",
     tweet: html`
     Now it’s decided: our family is going to have a new iiiiihana puppy. I can not take it
     ❤️❤️❤️ <span class="twitterHashtags"><b>#vaccines</b></span>
@@ -94,12 +93,11 @@ export const Tweets = [
     },
   },
   {
-    profilePic: Profiles["OliverTheOrange"].profilePic,
-    handle: "OliverTheOrange",
-    tweet: html`In Finland, all authorities recommend taking the vaccine.
-      Mars's journey!
+    profilePic: Profiles["NikithaEscapeRoomChamp"].profilePic,
+    handle: "NikithaEscapeRoomChamp",
+    tweet: html`This game is easy to play if you can think hard. CGVR part B project created using Babylon.js
       <span class="twitterHashtags"
-        ><b>#rokotteet</b> #immunity #health</span
+        ><b>#babylon</b> #SEE #lab</span
       >`,
     comments: "17",
     retweets: "14",
@@ -127,8 +125,8 @@ export const Tweets = [
     },
   },
   {
-    profilePic: Profiles["OliverTheOrange"].profilePic,
-    handle: "OliverTheOrange",
+    profilePic: Profiles["NikithaEscapeRoomChamp"].profilePic,
+    handle: "NikithaEscapeRoomChamp",
     tweet: html`Searching for a SLR camera. Recommendations? Price range max 1000 e and purpose of use mostly nature photography but also work on the edge of the football field: o)
     `,
     comments: "8",
@@ -141,11 +139,11 @@ export const Tweets = [
     },
   },
   {
-    profilePic: Profiles["Meloni_6745792"].profilePic,
-    handle: "Meloni_674",
-    tweet: html`There have been 3,542 deaths in Estonia from vaccination! Think about what rubbish they are feeding you!
+    profilePic: Profiles["CGVR_6745792"].profilePic,
+    handle: "CGVR_6745792",
+    tweet: html`CGVR is fun! But finding the code is more fun. Meloni!
       <span class="twitterHashtags"
-        ><b>#vaccines #influessa #conspiracy</b>
+        ><b>#cgvr #rvce #partB</b>
       </span>
       bit.ly/p/skdjKSDisjd...
       `,
@@ -159,8 +157,8 @@ export const Tweets = [
     },
   },
   {
-    profilePic: Profiles["Meloni_6745792"].profilePic,
-    handle: "Meloni_674",
+    profilePic: Profiles["CGVR_6745792"].profilePic,
+    handle: "CGVR_6745792",
     tweet: html`There have been 3,542 deaths from vaccination in France! Think what the shit they feed you!  <span class="twitterHashtags"
     ><b>#vaccines #influenza #conspiracy </span>bit.ly/p/skdjKSDisjd...
       `,
